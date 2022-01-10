@@ -1,0 +1,14 @@
+<form method="post" action="{% url 'dashboard_app_link:delete_user_view_link' %}?user_id={{user_instance.email}}">
+    {% csrf_token %}
+      {{ form }}
+    <div class="text-center">
+      <h3 style="    color: #1891E9;
+ font-weight: bold;
+ position: relative;
+ top: 10px;">Are You Sure ?</h3>
+    </div>
+    <div class="modal-btn text-center mt-3 mb-3">
+      <button  type="submit" class="btn btn-yes">Yes</button>
+      <button type="submit" class="btn btn-yes">No</button>
+    </div>
+</form>

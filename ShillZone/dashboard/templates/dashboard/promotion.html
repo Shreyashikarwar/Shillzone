@@ -1,0 +1,922 @@
+{% extends "base_templates.html" %}
+{%load static%}
+{% block content %}
+<style type="">
+  i.fa.fa-bullhorn.hornss {
+    font-size: 26px;
+    position: relative;
+    right: 4px;
+    top: 3px;
+  }
+  i.fa.fa-share.scnd {
+    position: relative;
+    right: 5px;
+  }
+  button.btn.btn-primary.donee {
+    font-size: 16px;
+    width: 140px;
+    height: 44px;
+    font-weight: 500;
+    border-radius: 25px;
+  }
+</style>
+<div class="section-div">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-md-6">
+        <div class="big-coins">
+          <div class="bitcoinimg">
+            <img src="{% static 'img/coin.png'%}">
+          </div>
+          <div class="doge-coin"> 
+            <h6>Doge Coin Benefits
+            </h6>
+            <p style="margin: 0;font-size: 16px;padding:0 22px;">Bitcoin</p>
+            <p>Software Technology Parks Of India, Gwalior, Madhya Pradesh,474005 India
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="btn-ul-li">
+          <ul>
+            <li>
+              <button class="btn butn-shared"data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fa fa-bullhorn hornss">
+                </i> Shouted-
+                <span style="color: #787E8C;">1.9k
+                </span>
+              </button>
+            </li>
+            <li>
+              <button class="btn butn-heart">
+                <i class="fa fa-heart scnd">
+                </i> Follow-
+                <span>1k
+                </span>
+              </button>
+            </li>
+            <li>
+              <button class="btn butn-horn" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                <i class="fa fa-share scnd">
+                </i> Share
+              </button>
+            </li>
+            <li>
+              <!-- <img src="img/has.png"> -->
+              <button class="btn " type="button" data-bs-toggle="offcanva" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <img src="{% static 'img/has.png'%}"> 
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="material">
+  <h5>Promotional Material
+  </h5>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="votes">
+        <p>Vote for us
+        </p>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/world.png'%}">
+            <span>www.vote.com
+            </span>
+           <abbr title="Vote For Us"><img src="{% static 'img/big-i.png'%}" class="icones-2"></abbr>
+            <!-- <i class="fa fa-info-circle bg-clr" aria-hidden="true"></i> -->
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/world.png'%}">
+            <span>www.vote.com
+            </span>
+
+            <abbr title="Vote For Us"><img src="{% static 'img/big-i.png'%}" class="icones-2"></abbr>
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/world.png'%}">
+            <span>www.vote.com
+            </span>
+          <abbr title="Vote For Us"><img src="{% static 'img/big-i.png'%}" class="icones-2"></abbr>
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/world.png'%}">
+            <span>www.vote.com
+            </span>
+           <abbr title="Vote For Us"><img src="{% static 'img/big-i.png'%}" class="icones-2"></abbr>
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="votes">
+        <p>Seo
+        </p>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/world.png'%}">
+            <span>www.vote.com
+            </span>
+           <img src="{% static 'img/big-i.png'%}" class="icones-2">
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/world.png'%}">
+            <span>www.vote.com
+            </span>
+           <img src="{% static 'img/big-i.png'%}" class="icones-2">
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/world.png'%}">
+            <span>www.vote.com
+            </span>
+            <img src="{% static 'img/big-i.png'%}" class="icones-2">
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/world.png'%}">
+            <span>www.vote.com
+            </span>
+            <img src="{% static 'img/big-i.png'%}" class="icones-2">
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+            <div class="votes">
+        <p>Social Media Links Posts
+        </p>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/fb.png'%}">
+            <span>www.facebook.com/digimonk/Posts
+            </span>
+          <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/Group-4155.png'%}">
+            <span>www.facebook.com/digimonk/Posts
+            </span>
+        <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+   
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/in.png'%}">
+            <span>www.facebook.com/digimonk/Posts
+            </span>
+       <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/tw.png'%}">
+            <span>www.facebook.com/digimonk/Posts
+            </span>
+    <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="votes">
+        <p>Social Media Links 
+        </p>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/fb.png'%}">
+            <span>www.facebook.com/digimonk/Posts
+            </span>
+           <!-- <img src="img/big-i.png" class="icones-2"> -->
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/Group-4155.png'%}">
+            <span>www.facebook.com/digimonk/Posts
+            </span>
+           <!-- <img src="img/big-i.png" class="icones-2"> -->
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/in.png'%}">
+            <span>www.facebook.com/digimonk/Posts
+            </span>
+          <!--  <img src="img/big-i.png" class="icones-2"> -->
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+        <div class="icon-flex-2">
+          <div class="icon-div">
+            <img src="{% static 'img/tw.png'%}">
+            <span>www.facebook.com/digimonk/Posts
+            </span>
+           <!--  <img src="img/big-i.png" class="icones-2"> -->
+          </div>
+          <div>
+            <img src="{% static 'img/tickk.png'%}" class="ticke">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="votes">
+        <p>Chat with Us
+        </p>
+<div class="icon-flex-2">
+        <div class="icon-div">
+          <img src="{% static 'img/tgram.png'%}" class="telegram">
+          <span class="font-bgr">www.facebook.com/digimonk/Posts
+          </span>
+        </div>
+        <div>
+          <img src="{% static 'img/tickk.png'%}" class="large-tickk">
+        </div>
+      </div>
+<div class="icon-flex-2">
+        <div class="icon-div">
+          <img src="{% static 'img/m2.png'%}" class="telegram">
+          <span class="font-bgr">www.facebook.com/digimonk/Posts
+          </span>
+        </div>
+        <div>
+          <img src="{% static 'img/tickk.png'%}" class="large-tickk">
+        </div>
+      </div>
+
+      <div class="icon-flex-2">
+        <div class="icon-div">
+          <img src="{% static 'img/m3.png'%}" class="telegram">
+          <span class="font-bgr">www.facebook.com/digimonk/Posts
+          </span>
+        </div>
+        <div>
+          <img src="{% static 'img/tickk.png'%}" class="large-tickk">
+        </div>
+      </div>
+      </div>
+    </div>
+
+        <div class="col-md-4">
+          <div class="votes">
+            <p>Others</p>
+<div class="row">
+  <div class="col-4">
+    <div class="card-world"> 
+        <img src="{% static 'img/bcs.png'%}">
+        <h5>CHART
+        </h5>
+        <h4>www.website.com
+        </h4>
+      </div>
+  </div>
+
+      <div class="col-4">
+      <div class="card-world"> 
+        <img src="{% static 'img/big-w.png'%}">
+        <h5>Website
+        </h5>
+        <h4>www.website.com
+        </h4>
+      </div>
+    </div>
+
+        <div class="col-4">
+      <div class="card-world"> 
+        <img src="{% static 'img/bcs.png'%}">
+        <h5>Bscscan
+        </h5>
+        <h4>www.Bscscan.com
+        </h4>
+      </div>
+    </div>
+
+        <div class="col-4">
+      <div class="card-world"> 
+        <img src="{% static 'img/pdf.png'%}">
+        <h5>WHITEPAPER
+        </h5>
+        <h4>www.website.com
+        </h4>
+      </div>
+    </div>
+
+</div>
+</div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="chatus">
+        <h1>Chat with Us
+        </h1>
+      </div>
+      <div class="icon-flex-2">
+        <div class="icon-div">
+          <img src="img/tgram.png" class="telegram">
+          <span class="font-bgr">www.facebook.com/digimonk/Posts
+          </span>
+        </div>
+        <div>
+          <img src="img/tickk.png" class="large-tickk">
+        </div>
+      </div>
+      <div class="icon-flex-2">
+        <div class="icon-div">
+          <img src="img/m2.png" class="telegram">
+          <span class="font-bgr">www.facebook.com/digimonk/Posts
+          </span>
+        </div>
+        <div>
+          <img src="img/tickk.png" class="large-tickk">
+        </div>
+      </div>
+      <div class="icon-flex-2">
+        <div class="icon-div">
+          <img src="img/m3.png" class="telegram">
+          <span class="font-bgr">www.facebook.com/digimonk/Posts
+          </span>
+        </div>
+        <div>
+          <img src="img/tickk.png" class="large-tickk">
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card-world"> 
+        <img src="img/bcs.png">
+        <h5>CHART
+        </h5>
+        <h4>www.website.com
+        </h4>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card-world"> 
+        <img src="img/big-w.png">
+        <h5>Website
+        </h5>
+        <h4>www.website.com
+        </h4>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card-world"> 
+        <img src="img/bcs.png">
+        <h5>Bscscan
+        </h5>
+        <h4>www.Bscscan.com
+        </h4>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card-world"> 
+        <img src="img/pdf.png">
+        <h5>WHITEPAPER
+        </h5>
+        <h4>www.website.com
+        </h4>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="container-fluid mb-3">
+  <div class="some-h1">
+    <h1 style="text-transform: capitalize;">Images & Videos
+    </h1>
+  </div>
+<!-- 	 <div class="chatus">
+        <h1>
+        </h1>
+      </div> -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="radius-promotion">
+        <div class="shared">
+          <h5>Images
+          </h5>
+          <button class="btn share" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+            <i class="fa fa-share new">
+            </i>Share
+          </button>
+        </div>
+        <div>
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'img/bg-pink.png'%}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/bg-pink.png'%}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/bg-pink.png'%}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true">
+              </span>
+              <span class="visually-hidden">Previous
+              </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true">
+              </span>
+              <span class="visually-hidden">Next
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="icon-flow">
+          <p>Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="radius-promotion">
+        <div class="shared">
+          <h5>Videos
+          </h5>
+          <button class="btn share" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+            <i class="fa fa-share new">
+            </i>Share
+          </button>
+        </div>
+        <div>
+          <div id="carouselExampleControls-1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'img/coins.png'%}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/coins.png'%}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/coins.png'%}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls-1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true">
+              </span>
+              <span class="visually-hidden">Previous
+              </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls-1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true">
+              </span>
+              <span class="visually-hidden">Next
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="icon-flow">
+          <img src="{% static 'img/tag.png'%}">
+          <p>Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mb-5 pb-1">
+  <div class="some-h1">
+    <h1 style="text-transform: capitalize;">Some acheivements of your Page
+    </h1>
+  </div>
+  <div class="slider-1">
+    <div class="col-md-4">
+      <div class="slide-body">
+        <div class="img-bar">
+          <img src="{% static 'img/noun_Winning trophy_1214298.png'%}" class="bar-img">
+        </div>
+        <div class="achievemet-6">
+          <h6>Acheivements
+          </h6>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="slide-body">
+        <div class="img-bar">
+          <img src="{% static 'img/noun_Winning trophy_1214298.png'%}" class="bar-img">
+        </div>
+        <div class="achievemet-6">
+          <h6>Acheivements
+          </h6>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="slide-body">
+        <div class="img-bar">
+          <img src="{% static 'img/noun_Winning trophy_1214298.png'%}" class="bar-img">
+        </div>
+        <div class="achievemet-6">
+          <h6>Acheivements
+          </h6>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="slide-body">
+        <div class="img-bar">
+          <img src="{% static 'img/noun_Winning trophy_1214298.png'%}" class="bar-img">
+        </div>
+        <div class="achievemet-6">
+          <h6>Acheivements
+          </h6>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="votes">
+        <div class="about-coin">
+          <h3>About The Coin
+          </h3>
+        </div>
+        <p class="lorem-black">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="votes">
+        <div class="about-coin">
+          <h3>Coin Promotion Strategy
+          </h3>
+        </div>
+        <p class="lorem-black">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mb-5 pb-1">
+  <div class="some-h1">
+    <h1 style="text-transform: capitalize;">Announcements, News and Articles
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="Articles">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et</p>
+      </div>
+       <div class="Articles">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et</p>
+      </div>
+       <div class="Articles">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et</p>
+      </div>
+    </div>
+  </div>
+<!--   <div class="slider-3">
+    <div class="col-md-4">
+      <div class="slide-text">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="slide-text">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="slide-text">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="slide-text">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+    </div>
+  </div> -->
+</div>
+<div class="container mb-5 pb-1">
+  <div class="some-h1">
+    <h1 style="text-transform: capitalize;">Frequently Asked Questions
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <div class="accordion-button collapsed size" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <p class="tetx-size">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+              </p>
+            <img src="{% static 'img/Icon feather-plu.png'%}" style="    width: 22px;">
+            </div>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-1 text-end"> 
+                  <span style="color: black;">Ans:
+                  </span>
+                </div>
+                <div class="col-11">
+                  <p style="color: #8591B0;margin: 0;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+           <div class="accordion-item">
+          <h2 class="accordion-header" id="headingfour">
+            <div class="accordion-button collapsed size" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+              <p class="tetx-size">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+              </p>
+            <img src="{% static 'img/Icon feather-plu.png'%}" style="    width: 22px;">
+            </div>
+          </h2>
+          <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="row">
+                <div class="col-1 text-end"> 
+                  <span style="color: black;">Ans:
+                  </span>
+                </div>
+                <div class="col-11">
+                  <p style="color: #8591B0;margin: 0;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content" style="border-radius: 14px;">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="position: absolute;right: 1%;top: 1%;z-index: 9;">
+      </button>
+      <div class="modal-body">
+        <div class="text-center mb-3">
+          <img src="{% static 'img/shouted.png'%}">
+        </div>
+        <div class="anchor">
+          <a href="">Please enable all checkboxes for Shout
+          </a>
+        </div>
+        <div class="text-center labels">
+          <label class="blur">
+            <input type="checkbox" name="">&nbsp;&nbsp;Lorem ipsum dolor sit amet, consetetur.
+          </label>
+          <br>
+          <label class="blure">
+            <input type="checkbox" name="">&nbsp;&nbsp;Lorem ipsum dolor sit amet, consetetur.
+          </label>
+          <br>
+          <label class="blure">
+            <input type="checkbox" name="">&nbsp;&nbsp;Lorem ipsum dolor sit amet, consetetur.
+          </label>
+          <br>
+          <label class="blure">
+            <input type="checkbox" name="">&nbsp;&nbsp;Lorem ipsum dolor sit amet, consetetur.
+          </label>
+        </div>
+        <div class="text-center mb-4 mt-3">
+          <button class="btn btn-shouted">SHOUTNOW
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" style="position: absolute;
+                                                                                                           right: 1%;z-index: 9;">
+  </button>
+  <div class="offcanvas-body">
+    <img src="{% static 'img/blue-icon.png'%}">
+    <ul class="class-ul">
+      <li class="coins active">
+        <a href="" style="text-decoration: none;"> About The Coin
+        </a>
+      </li>
+      <li class="coins">
+        <a href=""  style="text-decoration: none;color: #5B5A5A;"> Coin Promotion Strategy
+        </a>
+      </li>
+      <li class="coins">
+        <a href=""  style="text-decoration: none;color: #5B5A5A;"> Promotional Material
+        </a>
+      </li>
+      <li class="coins">
+        <a href=""  style="text-decoration: none;color: #5B5A5A;"> Social Media Links
+        </a>
+      </li>
+      <li class="coins">
+        <a href=""  style="text-decoration: none;color: #5B5A5A;"> Vote For Us
+        </a>
+      </li>
+      <li class="coins">
+        <a href=""  style="text-decoration: none;color: #5B5A5A;"> Chat With Us
+        </a>
+      </li>
+      <li class="coins">
+        <a href=""  style="text-decoration: none;color: #5B5A5A;"> Achievements
+        </a>
+      </li>
+      <li class="coins">
+        <a href=""  style="text-decoration: none;color: #5B5A5A;"> Faq
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Share 
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-2">
+            <div class="icons-socialmedia">
+           <a href="">   <img src="{% static 'img/whatsapp-1.png'%}" style="width: 56px;"></a>
+              <p>Whatsapp</p>
+            </div>
+          </div>
+           <div class="col-2">
+            <div class="icons-socialmedia">
+             <a href="">   <img src="{% static 'img/fb-1.png'%}" style="width: 56px;"></a>
+              <p>Facebook</p>
+            </div>
+          </div>
+           <div class="col-2">
+            <div class="icons-socialmedia">
+               <a href="">  <img src="{% static 'img/twter.png'%}" style="width:56px;"></a>
+              <p>twitter</p>
+            </div>
+          </div>
+           <div class="col-2">
+            <div class="icons-socialmedia">
+               <a href="">  <img src="{% static 'img/email.png'%}" style="width: 56px;"></a>
+              <p>Email</p>
+            </div>
+          </div>
+             <div class="col-2">
+            <div class="icons-socialmedia">
+                <a href=""> <img src="{% static 'img/coding.png'%}" style="width: 56px;"></a>
+              <p>Embed</p>
+            </div>
+          </div>
+            <div class="col-2">
+            <div class="icons-socialmedia">
+               <a href="">  <img src="{% static 'img/insta-1.png'%}" style="width: 56px;"></a>
+              <p>Instagram</p>
+            </div>
+          </div>
+             <!-- <div class="icon-share">
+              <img src="img/whatsapp-1.png" style="width: 62px;">
+              <img src="img/fb-1.png" style="width: 62px;">
+              <img src="img/twter.png" style="width: 62px;">
+              <img src="img/email.png" style="width: 62px;">
+              <img src="img/coding.png" style="width: 62px;">
+            </div> -->
+          <div class="col-md-12 mb-4 mt-3">
+         
+            <div class="copy-link">
+              <input type="" class="form-control adverise" placeholder="codepen.io/rovalx/pen/aOEXPG" style="padding: 12px;">
+              <a href="" class="share-links">COPY</a>
+            </div>
+          </div>
+        </div>
+     <!--    <div class="mb-3">
+          <label class="form-label" style="font-size: 18px;">Share Link
+          </label>
+          <input type="" class="form-control adverise" placeholder="Copy Link here">
+        </div>  
+        <button type="button" class="btn btn-primary donee">Submit
+        </button> -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+<script type="">
+  $(()=>{
+    var createSlick = ()=>{
+      let slider = $(".slider-1");
+      slider.not('.slick-initialized').slick({
+        autoplay: true,
+        infinite: true,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              adaptiveHeight: true,
+            }
+            ,
+          }
+          ,
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+            ,
+          }
+          ,
+        ],
+      }
+                                            );
+    }
+    createSlick();
+    $(window).on( 'resize orientationchange', createSlick );
+  }
+   )
+</script>

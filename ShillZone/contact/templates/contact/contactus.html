@@ -1,0 +1,86 @@
+{% extends "base_templates.html" %}
+{%load static%}
+{% block content %}
+
+<div class="bg-about">
+  <h6>Contact Us</h6>
+</div>
+<div>
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+  </ol>
+</nav>
+</div>
+
+
+<div class="container mt-3 mb-5">
+  <div class="row">
+     <div class="col-md-6">
+      <div class="query">
+        <h1>Have a Query?</h1>
+        <p>Just Fill the Below Information.</p>
+      </div>
+     <form method="post"action=''>
+      {% csrf_token %}
+
+  <div class="mb-3">
+  <!--   <label for="exampleInputEmail1" class="form-label">Na</label> -->
+ 
+    <input type="" class="form-control" placeholder="Name" name="name" style="background: #F8F7FD;border: 1px solid #EBEBED;
+    height: 51px;">
+
+  </div>
+  <div class="mb-3">
+    
+    <input type="" class="form-control" placeholder="Phone number" name="phone"style="background: #F8F7FD;border: 1px solid #EBEBED;
+    height: 51px;">
+  </div>
+
+  <div class="mb-3">
+    
+    <input type="" class="form-control" placeholder="Email" name="email" style="background: #F8F7FD;border: 1px solid #EBEBED;
+    height: 51px;">
+  </div>
+  <div class="mb-3">
+    
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="comment" placeholder="Comment" style="background: #F8F7FD;border: 1px solid #EBEBED;
+    "></textarea>
+</div>
+  <button type="submit" class="btn btn-primary sendd">Send</button>
+</form>
+      </div>
+       <div class="col-md-6">
+        <div class="text-end">
+          <img src="{% static 'img/Layer-2.png'%}" class="contact-pic">
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="sucess">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="sucess-1">
+          <img src="{% static 'img/Success.png'%}">
+          <h2>Chat with us on </h2>
+          <img src="{% static 'img/tele.png'%}" class="tele">
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="text-center mt-5">
+          <button class="btn large">Advertise With Us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock content %}

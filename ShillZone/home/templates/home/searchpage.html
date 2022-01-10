@@ -1,0 +1,260 @@
+{% extends "base_templates.html"%}
+{%load static%}
+{% block content %}
+<style type="">
+  i.fa.fa-search {
+    position: absolute;
+    margin: 10px 0px;
+    color: #ccc;
+    right: 11%;
+  }
+  i.fa.fa-search.one-new {
+    position: absolute!important;
+    left: 26%;
+    margin: 0;
+    top: 10px;
+  }
+  input.form-control.bg-serch {
+    width: 30%;
+    background: #9F9F9F;
+    color: #fff;
+    height: 38px;
+    border-radius: 26px;
+    box-shadow: 0px 8px 12px #2c427017;
+    border: none;
+  }
+  button.btn.btn-outline-primary.all {
+    width: 62px;
+    background: #1891E9;
+    color: white;
+    font-size: 13px;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 10%);
+  }
+  .table-new thead tr::after{
+    background-color: #F4EDF9;
+  }
+  .table-new{
+    box-shadow: none;
+    background: transparent;
+  }
+  .btn.btn-outline-primary.blues {
+    width: auto;
+    padding: 6px 24px;
+    font-size: 13px;
+    color: #1891E9;
+    font-weight: 500;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 10%);
+  }
+  input.form-control.dial {
+    border-radius: 26px;
+    border: none;
+    color: #1891E9;
+    opacity: 1;
+  }
+  ol.breadcrumb {
+    padding: 10px 0px;
+    margin: 0;
+  }
+  button.btn.btn-outline-primary.sort {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 97px;
+    height: 32px;
+    font-size: 13px;
+  }
+  @media screen and (max-width: 700px) and (min-width: 320px) {
+    input.form-control.bg-serch{
+      width: 100%;
+    }
+    i.fa.fa-search.one-new {
+      position: absolute!important;
+      left: 88%;
+      margin: 0;
+      top: 7px;
+    }
+  }
+</style>
+<div class="bg-about">
+  <h6>Results</h6>
+</div>
+<div class="nav-link-btn">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'home_app_link:home_view_link' %}">Home
+        </a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Search Results
+      </li>
+    </ol>
+  </nav>
+  <div class="dropdown">
+    <a class="btn btn-outline-primary sort dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+      Sort 
+      <i class="fa fa-arrow-circle-right" aria-hidden="true">
+      </i>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <li>
+        <a class="dropdown-item" href="#">Oldest
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">Newest
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="serch-btn mt-0" style="position: relative;right: 0px;">
+        <button class="btn btn-outline-primary all">All
+        </button>
+        <div class="dropdown">
+          <button class="btn btn-outline-primary blues dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Most Shouted page
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a class="dropdown-item" href="#">Week
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Month
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Ever
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-outline-primary blues">Most Followed Pages
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+<div class="search-result">
+  <h1>Result For "Shillzone Page Name"</h1>
+</div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table no-wrap table-new table-list" style="position: relative;">
+        <thead>
+          <tr>
+            <th>
+            </th>
+            <th>Sr. No.
+            </th>
+            <th>Coin Logo
+            </th>
+            <th>Coin Name
+            </th>
+            <th>Page Name
+            </th>
+            <th>Shouts
+            </th>
+            <th>Followers
+            </th>
+            <th>Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+    <tr>
+            <td>
+                   <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td>
+             <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td style="color: #1891E9;">Follow
+              <!-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fa fa-trash" aria-hidden="true"></i> -->
+            </td>
+          </tr>
+    <tr>
+            <td>
+                   <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td>
+             <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td style="color: #1891E9;">Unfollow
+              <!-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fa fa-trash" aria-hidden="true"></i> -->
+            </td>
+          </tr>
+        <tr>
+            <td>
+                   <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td>
+             <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td style="color: #1891E9;">Unfollow
+              <!-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fa fa-trash" aria-hidden="true"></i> -->
+            </td>
+          </tr>
+    <tr>
+            <td>
+                   <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td>
+             <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%"></a>
+            </td>
+  <td>           <a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="{% url 'dashboard_app_link:promotion_view_link' %}" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td style="color: #1891E9;">Follow
+              <!-- <i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;&nbsp;<i class="fa fa-trash" aria-hidden="true"></i> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<section >
+  <div>
+    <img src="{% static 'img/Group-4462.png'%}" style="width: 100%;">
+  </div>
+</section>
+{% endblock content %}
+

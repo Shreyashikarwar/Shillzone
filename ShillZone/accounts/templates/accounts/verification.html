@@ -1,0 +1,83 @@
+{% extends "base_templates.html"%}
+{%load static%}
+{% block content %}
+<style type="">
+	form.text-center.mt-3.mb-3 {
+    padding: 16px;
+    position: relative;
+    bottom: 10px;
+}
+form input {
+    display: inline-block;
+    width: 46px;
+    height: 44px;
+    text-align: left;
+    border: 1px solid #D0D0D080;
+    background: #E5E9ED 0% 0% no-repeat padding-box;
+    opacity: 0.67;
+    margin: 0 8px;
+}
+@media screen and (max-width: 700px) and (min-width: 320px){
+form input {
+    display: inline-block;
+    width: 43px;
+    height: 42px;
+    text-align: left;
+    border: 1px solid #D0D0D080;
+    background: #E5E9ED 0% 0% no-repeat padding-box;
+    opacity: 0.67;
+    margin: 0 7px;
+}
+}
+</style>
+
+<div class="container mt-5 mb-5">
+<div class="sign-in">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="img-forgot">
+				<img src="{% static 'img/OTP-2ldpi.png'%}" class="forgot-img">
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="text-center">
+				<h5>RESET PASSWORD?</h5>
+				<img src="{% static 'img/a.png'%}">
+				<p class="login-1">A 4 digit Verification code Sent to your Email. Please verify yourself and
+                     Reset your password.</p>
+				<img src="{% static 'img/Character.png'%}" class="mt-5">
+			</div>
+			<div class="form">
+			<form action="/account/verification/" method="post" class=" text-center mt-3 mb-3">
+                        {% csrf_token %}
+              <input class="form-control" id="email" type="hidden" name="email" placeholder="Email Address" value={{email}}>
+              <input class="otp" name="first" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1 >
+              <input class="otp" name="second" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1 >
+              <input class="otp" name="third" type="text" oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength=1 >
+              <input class="otp" name="forth" type="text" oninput='digitValidate(this)'onkeyup='tabChange(4)' maxlength=1 >
+                
+                <div class="form-floating mb-3 mt-3">		
+                    <input class="form-control style" name="password1" id="floatingInput" type="password" placeholder="New Password">
+                    <label for="floatingInput" class="labes">New Password</label>
+                  </div>
+                  <div class="form-floating mb-5">
+                    <input  class="form-control style" name="password2" type="password" placeholder="Confirm Password">
+                    <label class="labes">Confirm Password</label>
+                  </div>
+                 <button class="btn btn-sign-up" type="submit">SUBMIT</button>
+            </form>
+
+
+ <div class="otpsend">
+    <button type="submit" onclick="open_verification_function()" class="btn btn-primary confirm-btns" >Resend </button>
+  </div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+{% endblock content %}
+     

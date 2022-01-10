@@ -1,0 +1,40 @@
+{% extends "base_templates.html"%}
+{%load static%}
+{% block content %}
+
+<div class="container mt-5 mb-5">
+<div class="sign-in">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="img-forgot">
+				<img src="{% static 'img/forgotldpi.png'%}" class="forgot-img">
+			</div>
+		</div>
+		
+		<div class="col-md-6">
+			<div class="text-center">
+				<h5>FORGOT PASSWORD?</h5>
+				<img src="{% static 'img/a.png'%}">
+				<p class="forgot">Please enter your email address. You will receive a 4 digit Verification code</p>
+			</div>
+			<form method="post" action="">
+				{% csrf_token %}
+				
+			<div class="form">
+				<div class="form-floating mb-5">
+  <input class="form-control styles" name="email" id="floatingInput" placeholder="EMAIL">
+  <label for="floatingInput" class="labes">Email</label>
+</div>
+
+ <a href="{% url 'accounts_app_link:verification_view_link' %}"> <button class="btn btn-sign-up">SEND</button></a>
+
+			</div>
+		</form>
+		</div>
+	
+	</div>
+</div>
+</div>
+
+{% endblock content %}
+

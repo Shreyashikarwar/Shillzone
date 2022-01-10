@@ -1,0 +1,43 @@
+{% load static %}
+
+
+			<div>
+				<ul class="remove-dots">
+					{% url 'dashboard_app_link:dashboard_view_link' as dashboard%}
+					<li class="link ">
+						<a href="{% url 'dashboard_app_link:dashboard_view_link' %}" 
+						class="side-nav {% if request.path == '/dashboard/' %}active{% endif %}">
+							<img src="{% static 'img/Union-8.svg'%}" class="img-d">Dashborad</a>
+					</li>
+					
+					<li class="link">
+						<a href="following.php" class="side-nav">
+							<i class="fa fa-heart new" ></i> Following <span class="five">5</span></a>
+					</li>
+					<li class="link"><a href="notification.php" class="side-nav"><i class="fa fa-bell dasboard"></i> Notification</a>
+					</li>
+					{% url 'dashboard_app_link:manage_profile_view_link' as manage-profile%}
+					<li class="link">
+						<a href="{% url 'dashboard_app_link:manage_profile_view_link' %}" 
+						class="side-nav {% if request.path == '/dashboard/manage-profile' %}active{% endif %}">
+							<i class="fa fa-user new" aria-hidden="true"></i>Manage Profile</a>
+					</li>
+					{% url 'dashboard_app_link:manage_user_view_link' as manage-profile%}
+					<li class="link">
+						<a href="{% url 'dashboard_app_link:manage_user_view_link' %}"
+						 class="side-nav {% if request.path == '/dashboard/manage-user' %}active{% endif %}">
+							<i class="fa fa-user new" aria-hidden="true"></i>Manage Users</a>
+					</li>
+					<li class="link">
+						<a href=" 'my_pages.php" class="side-nav">
+							<i class="fa fa-file-text-o"></i> My Pages</a>
+					</li>
+					<li class="link">
+						<a href="index.php" class="side-nav">
+						<i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+					</li>
+				</ul>
+			</div>
+
+	
+

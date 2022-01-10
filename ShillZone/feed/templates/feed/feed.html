@@ -1,0 +1,370 @@
+{% extends "base_templates.html"%}
+{%load static%}
+{% block content %}
+
+<style type="">
+  i.fa.fa-search {
+    position: absolute;
+    margin: 10px 0px;
+    color: #ccc;
+    right: 11%;
+}
+i.fa.fa-search.one-new {
+    position: absolute!important;
+    left: 26%;
+    margin: 0;
+    top: 10px;
+}
+input.form-control.bg-serch {
+    width: 30%;
+    background: #9F9F9F;
+    color: #fff;
+    height: 38px;
+    border-radius: 26px;
+    box-shadow: 0px 8px 12px #2c427017;
+    border: none;
+}
+button.btn.btn-outline-primary.all {
+    width: 62px;
+    background: #1891E9;
+    color: white;
+    font-size: 13px;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 10%);
+}
+.table-new thead tr::after{
+  background-color: #F4EDF9;
+}
+.table-new{
+  box-shadow: none;
+  background: transparent;
+}
+
+  .btn.btn-outline-primary.blues {
+    width: auto;
+    padding: 6px 24px;
+    font-size: 13px;
+    color: #1891E9;
+    font-weight: 500;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 10%);
+}
+input.form-control.dial {
+    border-radius: 26px;
+    border: none;
+    color: #1891E9;
+    opacity: 1;
+}
+ol.breadcrumb {
+    padding: 10px 0px;
+    margin: 0;
+}
+button.btn.btn-outline-primary.sort {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+        width: 97px;
+    height: 32px;
+    font-size: 13px;
+}
+@media screen and (max-width: 700px) and (min-width: 320px) {
+input.form-control.bg-serch{
+  width: 100%;
+  }
+  i.fa.fa-search.one-new {
+    position: absolute!important;
+    left: 88%;
+    margin: 0;
+    top: 7px;
+}
+}
+</style>
+
+<div class="bg-about">
+  <h6>Feed Page</h6>
+  <div class="search-fiex">
+        <i class="fa fa-search"></i>
+      <input type="Search" name="" class="form-control dial" placeholder="search"></div>
+      </div>
+<div class="nav-link-btn">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Shouted Page</li>
+  </ol>
+</nav>
+      <div class="dropdown">
+  <a class="btn btn-outline-primary sort dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+   Sort <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="dropdown-item" href="#">Oldest</a></li>
+    <li><a class="dropdown-item" href="#">Newest</a></li>
+  </ul>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+          <div class="serch-btn mt-0" style="position: relative;right: 0px;">
+            <button class="btn btn-outline-primary all">All</button>
+            <div class="dropdown">
+  <button class="btn btn-outline-primary blues dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Most Shouted page
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Week</a></li>
+    <li><a class="dropdown-item" href="#">Month</a></li>
+    <li><a class="dropdown-item" href="#">Ever</a></li>
+  </ul>
+</div>
+<button class="btn btn-outline-primary blues">Most Followed Pages</button>
+<button class="btn btn-outline-primary blues">Promoted Pages</button>
+
+          </div>
+        </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+<div class="directory">
+  <p>Search via directory</p>
+</div>
+
+<div class="text-transform">
+  <p>Browse for pages alphabetically. Numbers 0 to 9 contain non-Latin character pages. Note: This only includes pages that have Public Search Listings available on Shillzone.</p>
+</div>
+<div class="bg-search">
+  <input type="search" name="" class="form-control bg-serch" placeholder="Search"><i class="fa fa-search one-new" aria-hidden="true"></i>
+
+</div>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="directory">
+  <p>Alphabetically</p>
+</div>
+<div class="alphabet">
+  <ul>
+    <li><a href="">A</a></li>
+     <li><a href="" class="acitve-alphabet">B</a></li>
+      <li><a href=""class="acitve-alphabet">C</a></li>
+       <li><a href=""class="acitve-alphabet">D</a></li>
+        <li><a href=""class="acitve-alphabet">E</a></li>
+         <li><a href=""class="acitve-alphabet">F</a></li>
+          <li><a href=""class="acitve-alphabet">G</a></li>
+           <li><a href=""class="acitve-alphabet">H</a></li>
+            <li><a href=""class="acitve-alphabet">I</a></li>
+             <li><a href=""class="acitve-alphabet">J</a></li>
+              <li><a href=""class="acitve-alphabet">K</a></li>
+               <li><a href=""class="acitve-alphabet">L</a></li>
+                <li><a href=""class="acitve-alphabet">M</a></li>
+                 <li><a href=""class="acitve-alphabet">N</a></li>
+                  <li><a href=""class="acitve-alphabet"class="acitve-alphabet">O</a></li>
+                   <li><a href=""class="acitve-alphabet">P</a></li>
+                    <li><a href=""class="acitve-alphabet">Q</a></li>
+                     <li><a href=""class="acitve-alphabet">R</a></li>
+                      <li><a href=""class="acitve-alphabet">S</a></li>
+                       <li><a href=""class="acitve-alphabet">T</a></li>
+                        <li><a href=""class="acitve-alphabet">U</a></li>
+                         <li><a href=""class="acitve-alphabet">V</a></li>
+                          <li><a href=""class="acitve-alphabet">W</a></li>
+                           <li><a href=""class="acitve-alphabet">X</a></li>
+                            <li><a href=""class="acitve-alphabet">Y</a></li>
+                             <li><a href=""class="acitve-alphabet">Z</a></li>
+  </ul>
+</div>
+
+  </div>
+
+    <div class="row">
+    <div class="directory">
+  <p>Non-Latin Character</p>
+</div>
+<div class="numericals">
+  <ul style="padding: 0 10px;">
+     <li><a href="">0</a></li>
+    <li><a href=""class="acitve-alphabet">1</a></li>
+     <li><a href="" class="acitve-alphabet">2</a></li>
+      <li><a href=""class="acitve-alphabet">3</a></li>
+       <li><a href=""class="acitve-alphabet">4</a></li>
+        <li><a href=""class="acitve-alphabet">5</a></li>
+         <li><a href=""class="acitve-alphabet">6</a></li>
+          <li><a href=""class="acitve-alphabet">7</a></li>
+           <li><a href=""class="acitve-alphabet">8</a></li>
+           <li><a href=""class="acitve-alphabet">9</a></li>
+
+  </ul>
+</div>
+
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+<div class="table-responsive">
+      <table class="table no-wrap table-new table-list" style="position: relative;">
+        <thead>
+          <tr>
+            <th>
+            </th>
+            <th>Sr. No.
+            </th>
+            <th>Action
+            </th>
+            <th>Coin Logo
+            </th>
+            <th>Coin Name
+            </th>
+            <th>Page Name
+            </th>
+            <th>Shouts
+            </th>
+            <th>Followers
+            </th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+    <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary active" style="color: #fff!important;">Following</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                   
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                 
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Following</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<section >
+  <div>
+    <img src="{% static 'img/Group-4462.png'%}" style="width: 100%;">
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

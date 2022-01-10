@@ -1,0 +1,229 @@
+{% extends "base_templates.html" %}
+{%load static%}
+{% block content %}
+<style type="">
+    i.fa.fa-circle {
+    color: red;
+    font-size: 6px;
+    position: relative;
+    bottom: 8px;
+    right: 6px;
+}
+</style>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+      {% include "dashboard/sidebar.html" %}
+		</div>
+		<div class="col-md-9">
+			<div class="dashboard-h1">
+				<h6>My Following Pages</h6>
+			 <div class="new-div-fix">
+        <a href="create.php"> <button class="btn btn-new">Create new page &nbsp;<i class="fa fa-plus"></i></button></a> 
+<ul class="notification-drop">
+    <li class="item">
+      <i class="fa fa-bell-o notification-bell" aria-hidden="true"></i> <span class="btn__badge pulse-button ">4</span>     
+      <ul>
+        <li class="notification-list-li">
+          <div class="row">
+          <div class="col-3">
+            <img src="{% static 'https://digimonk.co/bolt/images/Ellipse-1.png'%}">
+          </div>
+          <div class="col-9">
+            <p class="notification-p-li">
+What is Shillzone
+A Free, Interactive Directory for crypto Developer to Store and Prioritize all their</p>
+          </div>
+        </div>
+    </li>
+          <li class="notification-list-li">
+          <div class="row">
+          <div class="col-3">
+            <img src="{% static 'https://digimonk.co/bolt/images/Ellipse-1.png'%}">
+          </div>
+          <div class="col-9">
+            <p class="notification-p-li">
+What is Shillzone
+A Free, Interactive Directory for crypto Developer to Store and Prioritize all their</p>
+          </div>
+        </div>
+    </li>
+         <li class="notification-list-li">
+          <div class="row">
+          <div class="col-3">
+            <img src="{% static 'https://digimonk.co/bolt/images/Ellipse-1.png'%}">
+          </div>
+          <div class="col-9">
+            <p class="notification-p-li">
+What is Shillzone
+A Free, Interactive Directory for crypto Developer to Store and Prioritize all their</p>
+          </div>
+        </div>
+    </li>
+    <div class="text-center mb-4 mt-3">
+      <a href="{% url 'dashboard_app_link:notification_view_link' %}"><button class="btn  gradient">View All</button></a>
+    </div>
+      </ul>
+    </li>
+  </ul>
+
+        <!-- <a href="" style="color: #fff;"> <i class="fa fa-bell"><span class="dotss">4</span></i></a> -->
+        </div>
+			</div>
+			<div class="search">
+				<div class="mt-4">
+				<i class="fa fa-search"></i>
+			<input type="Search" name="" class="form-control" placeholder="search"></div>
+			</div>
+			<div class="row">
+             <div class="table-responsive">
+        <table class="table no-wrap table-new table-list" style="
+    position: relative;
+">
+          <thead>
+            <tr>
+              
+              <th>Sr. No.</th>
+              <th>Coin Logo</th>
+              <th>Coin Name</th>
+              <th>Page Name</th>
+              <th>Shouts</th>
+              <th>Followers</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              
+              <td>01</td>
+              <td><img src="{% static 'img/coin.png'%}"></td>
+              <td>Bitcoin</td>
+              <td>Invest in Bitcoin</td>
+              <td>25</td>
+              <td>12</td>
+              <td><!-- <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href=""data-bs-toggle="modal" data-bs-target="#exampleModal-1"><i class="fa fa-trash" aria-hidden="true"></i></a>&nbsp;&nbsp; --><span style="color: #1891E9;font-size: 15px;"> Unfollow</span></td>
+            </tr>
+			
+			
+	     <tr>
+              
+              <td>01</td>
+              <td><img src="{% static 'img/coin.png'%}"></td>
+              <td>Bitcoin</td>
+              <td>Invest in Bitcoin</td>
+              <td>25</td>
+              <td>12</td>
+             <td><!-- <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href=""data-bs-toggle="modal" data-bs-target="#exampleModal-1"><i class="fa fa-trash" aria-hidden="true"></i></a>&nbsp;&nbsp; --><span style="color: #1891E9;font-size: 15px;"> Unfollow</span></td>
+            </tr>
+			
+			
+		     <tr>
+              
+              <td>01</td>
+              <td><img src="{% static 'img/coin.png'%}"></td>
+              <td>Bitcoin</td>
+              <td>Invest in Bitcoin</td>
+              <td>25</td>
+              <td>12</td>
+                <td><!-- <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href=""data-bs-toggle="modal" data-bs-target="#exampleModal-1"><i class="fa fa-trash" aria-hidden="true"></i></a>&nbsp;&nbsp; --><span style="color: #1891E9;font-size: 15px;"> Unfollow</span></td>
+            </tr>
+			
+	     <tr>
+              
+              <td>01</td>
+              <td><img src="{% static 'img/coin.png'%}"></td>
+              <td>Bitcoin</td>
+              <td>Invest in Bitcoin</td>
+              <td>25</td>
+              <td>12</td>
+               <td><!-- <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>&nbsp;&nbsp;<a href=""data-bs-toggle="modal" data-bs-target="#exampleModal-1"><i class="fa fa-trash" aria-hidden="true"></i></a>&nbsp;&nbsp; --><span style="color: #1891E9;font-size: 15px;"> Unfollow</span></td>
+            </tr>
+			
+			
+			
+			
+			
+			
+            
+          
+          </tbody>
+        </table>
+      </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Following</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+      <div class="col-md-6">
+  <div class="mb-3">
+    <label class="form-label">Coin Name</label>
+    <input type="" class="form-control" placeholder="Coin Name">
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="mb-3">
+    <label class="form-label">Page Name</label>
+    <input type="Total Prospects" class="form-control" placeholder="Page Name">
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="mb-3">
+    <label class="form-label">Shouts  </label>
+    <input type="password" class="form-control" placeholder="Shouts">
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="mb-3">
+    <label class="form-label">Followers</label>
+    <input type="" class="form-control" placeholder="Followers">
+  </div>
+</div>
+<div class="text-end">
+  <button type="submit" class="btn btn-primary sbumit">Submit</button>
+</div>
+
+     </div>
+      </div>
+   
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+<div class="modal-body">
+       <div class="text-center">
+         <h3 style="    color: #1891E9;
+    font-weight: bold;
+    position: relative;
+    top: 10px;">Are You Sure ?</h3>
+       </div>
+       <div class="modal-btn text-center mt-3 mb-3">
+         <button class="btn btn-yes">Yes</button>
+         <button class="btn btn-yes">No</button>
+       </div>
+      </div>
+   
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

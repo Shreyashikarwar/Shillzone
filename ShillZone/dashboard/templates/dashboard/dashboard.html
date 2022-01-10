@@ -1,0 +1,685 @@
+{% extends "base_templates.html" %}
+{%load static%}
+{% block content %}
+
+<style type="">
+	i.fa.fa-circle {
+    color: red;
+    font-size: 6px;
+    position: relative;
+    bottom: 8px;
+    right: 6px;
+}
+/* .dashboard-h1{
+    display: flex;
+    justify-content: space-between;
+    background: #1891E9;
+    padding: 9px;
+    color: #fff;
+} */
+</style>
+
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+        {% include "dashboard/sidebar.html" %}
+		</div>
+		<div class="col-md-9">
+			<div class="dashboard-h1">
+				<h6>Dashboard</h6>
+				<div class="new-div-fix">
+				<a href="{% url 'dashboard_app_link:create_view_link' %}">	<button class="btn btn-new">Create new page &nbsp;<i class="fa fa-plus"></i></button></a>
+  <!-- <a style="color: white;text-decoration: none;" class=" dropdown-toggle"   data-bs-toggle="dropdown" aria-expanded="false">
+   <i class="fa fa-bell"><span class="dotss">4</span></i>
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul> -->
+<!-- 	<a href="" style="color: #fff;"> <i class="fa fa-bell"><span class="dotss">4</span></i></a> -->
+<ul class="notification-drop">
+    <li class="item">
+      <i class="fa fa-bell-o notification-bell" aria-hidden="true"></i> <span class="btn__badge pulse-button ">4</span>     
+      <ul>
+        <li class="notification-list-li">
+        	<div class="row">
+        	<div class="col-3">
+        		<img src="{% static 'https://digimonk.co/bolt/images/Ellipse-1.png' %}">
+        	</div>
+        	<div class="col-9">
+        		<p class="notification-p-li">
+What is Shillzone
+A Free, Interactive Directory for crypto Developer to Store and Prioritize all their</p>
+        	</div>
+        </div>
+    </li>
+          <li class="notification-list-li">
+        	<div class="row">
+        	<div class="col-3">
+        		<img src="{% static 'https://digimonk.co/bolt/images/Ellipse-1.png'%}">
+        	</div>
+        	<div class="col-9">
+        		<p class="notification-p-li">
+What is Shillzone
+A Free, Interactive Directory for crypto Developer to Store and Prioritize all their</p>
+        	</div>
+        </div>
+    </li>
+         <li class="notification-list-li">
+        	<div class="row">
+        	<div class="col-3">
+        		<img src="{% static 'https://digimonk.co/bolt/images/Ellipse-1.png'%}">
+        	</div>
+        	<div class="col-9">
+        		<p class="notification-p-li">
+What is Shillzone
+A Free, Interactive Directory for crypto Developer to Store and Prioritize all their</p>
+        	</div>
+        </div>
+    </li>
+    <div class="text-center mb-4 mt-3">
+    	<a href="notification.php"><button class="btn  gradient">View All</button></a>
+    </div>
+      </ul>
+    </li>
+  </ul>
+				</div>
+			</div>
+			<div class="h6">
+				<h6>Most Shouted Page</h6>
+			</div>
+			<div class="row">
+				<div class="table-responsive-1">
+        <div class="butons-primary">
+                <button class="btn btn-outline-primary" style="font-weight: bold;width: auto!important;">Most Shouts This Week</button>&nbsp;&nbsp;
+&nbsp;                <button class="btn btn-outline-primary" style="font-weight: bold;width: auto!important;">Most Shouts This Month</button>&nbsp;&nbsp;
+&nbsp;
+                <button class="btn btn-outline-primary" style="font-weight: bold;width: auto!important;">Most Shouts Ever</button>
+              </div>
+      <table class="table no-wrap table-new-1 table-list" style="position: relative;">
+        <tbody>
+
+              <tr>
+            <td>
+                   <a href="promotion.html" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.html" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.html" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.html" style="color: #2d5385;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+              <tr>
+            <td>
+                   <a href="promotion.html" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.html" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary active" style="color: #fff!important;">Following</button> </td>
+            <td>
+
+             <a href="promotion.html" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.html" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+              <tr>
+            <td>
+                   <a href="promotion.html" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.html" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.html" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.html" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+              <tr>
+            <td>
+               <a href="promotion.html" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>   
+            </td>
+            <td> <a href="promotion.html" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Following</button> </td>
+            <td>
+
+             <a href="promotion.html" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.html" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+			<!-- 	<div class="col-md-4">
+					<div class="card radius">
+						<div class="black-box">
+							<p>Most Shouts This Week</p>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Bitcoin</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Ethereum</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">GMR Finance</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Safe Moon</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Shiba Inu</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="gradient">
+						<a href="feed.php">	<button class="btn  gradient">View All</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card radius">
+						<div class="black-box">
+							<p>Most Shouts This Month</p>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Bitcoin</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Ethereum</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">GMR Finance</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Safe Moon</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Shiba Inu</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="gradient">
+							<a href="feed.php">	<button class="btn  gradient">View All</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card radius">
+						<div class="black-box">
+							<p>Most Shouts Ever</p>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Bitcoin</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Ethereum</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">GMR Finance</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Safe Moon</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="box-flex one">
+							<div class="btcoin">
+								<p class="bitcoien">Shiba Inu</p>
+							</div>
+							<div>
+								<button class="btn grey-3">
+									<div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div>
+								</button>
+								<button class="btn grey-3">
+									<div class="flexe"> <i class="fa fa-heart"></i> 22</div>
+								</button>
+							</div>
+						</div>
+						<div class="gradient">
+							<a href="feed.php">	<button class="btn  gradient">View All</button></a>
+						</div>
+					</div>
+				</div> -->
+
+				<div class="col-md-12">
+					<div class="pages-h6">
+				<h6>Most Followed Pages</h6>
+				<a href="">View All</a>
+			</div>
+				</div>
+
+				<div class="table-responsive" style="background: #fff;border-radius: 14px;
+    margin: 16px 0; box-shadow: 0 20px 27px 0 rgb(0 0 0 / 12%)!important;">
+      <table class="table no-wrap table-new table-list" style="position: relative;box-shadow: none!important;">
+        <thead>
+          <tr>
+            <th>
+            </th>
+            <th>Sr. No.
+            </th>
+            <th>Action
+            </th>
+            <th>Coin Logo
+            </th>
+            <th>Coin Name
+            </th>
+            <th>Page Name
+            </th>
+            <th>Shouts
+            </th>
+            <th>Followers
+            </th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+    <tr>
+            <td>
+                   <a href="promotion.html" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.html" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.html" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.html" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                   <a href="promotion.html" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.html" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.html" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.html" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+              <tr>
+            <td>
+                   <a href="promotion.html" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.html" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary active" style="color: white!important;">Following</button> </td>
+            <td>
+
+             <a href="promotion.html" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.html" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                 <a href="promotion.html" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>  
+            </td>
+            <td> <a href="promotion.html" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.html" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.html" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                   <a href="promotion.html" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.html" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.html" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.html" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                 <a href="promotion.html" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.html" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary ">Following</button> </td>
+            <td>
+
+             <a href="promotion.html" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.html" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.html" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+
+
+        </tbody>
+      </table>
+    </div>
+
+<!-- 				<div class="col-md-4">
+        <div class="card shadow">
+  <img src="img/bitcoin.png">
+   <div class="card-body new" style="background: #F3F9FE;">
+    <div class="bitcoin">
+    <h2>Invest in Bitcoin</h2>
+    <h3>By : John Smith</h3>
+  </div>
+  <div class="box">
+<button class="btn gray"><div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div></button>
+<button class="btn gray"><div class="flexe"> <i class="fa fa-heart"></i> 22</div></button>
+  </div>
+ 
+
+</div>
+</div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow">
+  <img src="img/bitcoin.png">
+   <div class="card-body new" style="background: #F3F9FE;">
+    <div class="bitcoin">
+    <h2>Invest in Bitcoin</h2>
+    <h3>By : John Smith</h3>
+  </div>
+  <div class="box">
+<button class="btn gray"><div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div></button>
+<button class="btn gray"><div class="flexe"> <i class="fa fa-heart"></i> 22</div></button>
+  </div>
+ 
+
+</div>
+</div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow">
+  <img src="img/bitcoin.png">
+   <div class="card-body new" style="background: #F3F9FE;">
+    <div class="bitcoin">
+    <h2>Invest in Bitcoin</h2>
+    <h3>By : John Smith</h3>
+  </div>
+  <div class="box">
+<button class="btn gray"><div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div></button>
+<button class="btn gray"><div class="flexe"> <i class="fa fa-heart"></i> 22</div></button>
+  </div>
+ 
+
+</div>
+</div>
+      </div> -->
+
+<!--       <div class="col-md-12">
+					<div class="pages-h6">
+				<h6>My Following Pages</h6>
+				<a href="">View All</a>
+			</div>
+				</div> -->
+
+<!--         <div class="col-md-4">
+        <div class="card shadow">
+  <img src="img/bitcoin.png">
+   <div class="card-body new" style="background: #F3F9FE;">
+    <div class="bitcoin">
+    <h2>Invest in Bitcoin</h2>
+    <h3>By : John Smith</h3>
+  </div>
+  <div class="box">
+<button class="btn gray"><div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div></button>
+<button class="btn gray"><div class="flexe"> <i class="fa fa-heart"></i> 22</div></button>
+  </div>
+ 
+
+</div>
+</div>
+      </div> -->
+<!-- 
+        <div class="col-md-4">
+        <div class="card shadow">
+  <img src="img/bitcoin.png">
+   <div class="card-body new" style="background: #F3F9FE;">
+    <div class="bitcoin">
+    <h2>Invest in Bitcoin</h2>
+    <h3>By : John Smith</h3>
+  </div>
+  <div class="box">
+<button class="btn gray"><div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div></button>
+<button class="btn gray"><div class="flexe"> <i class="fa fa-heart"></i> 22</div></button>
+  </div>
+ 
+
+</div>
+</div>
+      </div> -->
+<!-- 
+        <div class="col-md-4">
+        <div class="card shadow">
+  <img src="img/bitcoin.png">
+   <div class="card-body new" style="background: #F3F9FE;">
+    <div class="bitcoin">
+    <h2>Invest in Bitcoin</h2>
+    <h3>By : John Smith</h3>
+  </div>
+  <div class="box">
+<button class="btn gray"><div class="flexe"><i class="fa fa-bullhorn" aria-hidden="true"></i> 122</div></button>
+<button class="btn gray"><div class="flexe"> <i class="fa fa-heart"></i> 22</div></button>
+  </div>
+ 
+
+</div>
+</div>
+      </div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

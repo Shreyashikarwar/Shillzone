@@ -1,0 +1,66 @@
+{% extends "base_templates.html"%}
+{%load static%}
+{% block content %}
+
+<div class="container mt-5 mb-5">
+	<div class="sign-in">
+		<div class="row">
+			<div class="col-md-6">
+				<div>
+					<img src="{% static 'img/Signupldpi.png'%}" class="sign-in-img">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="text-center">
+				
+					<div class="alert alert-dissmissible" role="alert">
+						<!-- <span aria-hidden="true">&times;</span> -->
+				
+				</div>
+				
+					<h5>WELCOME</h5>
+					<img src="{% static 'img/a.png'%}">
+					<p class="login">Sign up to start growing your investment now</p>
+				</div>
+				<form method="post">
+					{% csrf_token %}
+					{{ form }}
+				<div class="form">
+					<div class="form-floating mb-3">
+						{{sign_up_form.user_name}}
+<!--  <input class="form-control style" id="floatingInput" placeholder="USERNAME/EMAIL">-->
+  					<label for="id_user_name" class="labes">Username</label>
+</div>
+<div class="form-floating mb-3">
+	{{sign_up_form.email}}
+<!--  <input  class="form-control style" placeholder="Password">-->
+  <label class="labes">Email</label>
+</div>
+<div class="form-floating mb-4">
+	{{sign_up_form.password1}}
+<!--  <input  class="form-control style" placeholder="Password">-->
+  <label class="labes">Password</label>
+</div>
+
+<div class="form-floating mb-4">
+	{{sign_up_form.password2}}
+<!--  <input  class="form-control style" placeholder="Password">-->
+  <label class="labes">Confirm Password</label>
+</div>
+<div>
+ <button class="btn btn-sign-up" type="submit">SIGN UP</button>
+</div>
+<div class=" text-center mt-4">
+
+	<p>Already have an account?<a href="{% url 'accounts_app_link:sign_in_view_link' %}"> Sign in</a></p>
+</div>
+
+			</div>
+				</form>
+		</div>
+	</div>
+</div>
+</div>
+
+
+{% endblock content %}

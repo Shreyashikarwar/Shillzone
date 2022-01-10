@@ -1,0 +1,66 @@
+{% extends "base_templates.html" %}
+{%load static%}
+{% block content %}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+      {% include "dashboard/sidebar.html" %}
+		</div>
+		<div class="col-md-9">
+		  <div class="dashboard-h1">
+        <h6>Add User</h6>
+      </div>
+      <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+		      <div class="raius">
+      <div class="row">
+         <div class="col-md-6">
+          <div>
+  <div class="mb-3 mt-3">
+    <label  class="form-label user">Name</label>
+    {{add_user_form.user_name}}
+    <!-- <input type="Name" name="user_name" class="form-control borders"  placeholder="Name"> -->
+  </div>
+</div>
+</div>
+<div class="col-md-6">
+  <div>
+  <div class="mb-3 mt-3">
+    <label  class="form-label user">Email</label>
+    {{add_user_form.email}}
+    <!-- <input type="email" name="email" class="form-control borders" placeholder="Email"> -->
+  </div>
+</div>
+</div>
+<div class="col-md-6">
+<div>
+  <div class="mb-3 mt-3">
+    <label  class="form-label user">Password</label>
+    {{add_user_form.password1}}
+    <!-- <input type="password" name="password" class="form-control borders" placeholder="Password"> -->
+  </div>
+</div>
+</div>
+<div class="col-md-6">
+  <div>
+    <div class="mb-3 mt-3">
+      <label  class="form-label user">Confirm Password</label>
+      {{add_user_form.password2}}
+      <!-- <input type="password" name="confirm_password" class="form-control borders" placeholder="Confirm Password"> -->
+    </div>
+  </div>
+  </div>
+
+<div class="text-end mt-3 mb-2">
+  <button type="submit" class="btn btn-update">ADD</button>
+</div>
+
+         </div>
+       </div>
+      </form>
+		</div>
+	</div>
+</div>
+{% endblock content %}

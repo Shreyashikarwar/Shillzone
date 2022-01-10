@@ -1,0 +1,32 @@
+
+<form method="post" action="{% url 'dashboard_app_link:edit_user_view_link' %}?user_id={{user_instance.email}}" >
+    {% csrf_token %}
+    {{ form }}
+        <div class="row">
+<div class="col-md-12">
+    <div class="mb-3">
+      <label id="name" >Name   </label>
+      
+      <input type="" id="nameid" name="user_name" class="form-control" value="{{user_instance.user_name}}" placeholder="Name ">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label id="email" >Email</label>
+      <input type="email" class="form-control" id="emailid" readonly name="email" value="{{user_instance.email}}" placeholder="Email">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="mb-3">
+      <label id="pass">Password</label>
+      
+      <input type="password" name="password" id="passid" class="form-control" value="{{user_instance.password}}" placeholder="Password">
+    </div>
+</div>
+<div class="text-end">
+    <button type="submit" class="btn btn-primary sbumit">Submit</button>
+  </div>
+  
+       </div>
+
+</form>

@@ -1,0 +1,50 @@
+{% extends "base_templates.html"%}
+{%load static%}
+{% block content %}
+
+<div class="container mt-5 mb-5">
+<div class="sign-in">
+	<div class="row">
+		<div class="col-md-6">
+			<div>
+				<img src="{% static 'img/Signupldpi.png'%}" class="sign-in-img">
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="text-center">
+				<h5>WELCOME</h5>
+				<img src="{% static 'img/a.png'%}" >
+				<p class="login">Log in to start growing your investment now</p>
+			</div>
+<form method="POST" action="">
+			{% csrf_token %}
+			<div class="form">
+				<div class="form-floating mb-3">
+  <input class="form-control style" id="floatingInput" name="email" placeholder="EMAIL">
+  <label for="floatingInput" class="labes">Email</label>
+</div>
+<div class="form-floating">
+  <input  class="form-control style" type="password" name="password" placeholder="Password">
+  <label class="labes">Password</label>
+</div>
+ <div class="mb-3 mt-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1" style="color: #787E8C;font-size: 14px;">Keep me signed in</label>
+  </div>
+
+<button type="submit" class="btn btn-sign-up">SIGN IN</button>
+</form>
+<div class=" text-center mt-4">
+	<a href="{% url 'accounts_app_link:forgot_view_link' %}" class="">Forgot Password?</a>
+	<p>Don't have an account?<a href="{% url 'accounts_app_link:sign_up_view_link' %}"> Sign up</a></p>
+</div>
+
+			</div>
+			
+		</div>
+	</div>
+</div>
+</div>
+
+
+{% endblock content %}

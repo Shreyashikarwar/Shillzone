@@ -1,0 +1,221 @@
+{% extends "base_templates.html"%}
+{%load static%}
+{% block content %}
+
+<style type="">
+ol.breadcrumb {
+    padding: 10px 0px;
+    margin: 0;
+}
+button.btn.btn-outline-primary.all {
+    width: 62px;
+    background: #1891E9;
+    color: white;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 10%);
+}
+  i.fa.fa-search {
+    position: absolute;
+    margin: 10px 0px;
+    color: #ccc;
+    right: 11%;
+}
+input.form-control.dial {
+    border-radius: 26px;
+    border: none;
+    color: #1891E9;
+    opacity: 1;
+}
+button.btn.btn-outline-primary {
+    width: 97px;
+    font-weight: 500;
+    font-size: 13px;
+    padding-top: 8px;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 10%);
+}
+button.btn.btn-outline-primary:hover{
+	color: white!important;
+}
+button.btn.btn-outline-primary.crypto {
+    border-radius: 0px;
+    border: 1px solid #A5D9FF;
+    width: 92px;
+    border-radius: 4px;
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 10%);
+    padding: 8px
+
+}
+</style>
+
+<div class="bg-about">
+  <h6>Forums</h6>
+  <div class="search-fiex">
+        <i class="fa fa-search"></i>
+      <input type="Search" name="" class="form-control dial" placeholder="search"></div>
+      </div>
+      <div class="nav-link-btn">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Forums</li>
+  </ol>
+</nav>
+<!-- <button class="btn btn-outline-primary sort">Sort <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button> -->
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-7">
+			<div class="filters">
+				<ul>
+					<li>Filters:</li>
+					<button class="btn btn-outline-primary all">All</button>
+					<button class="btn btn-outline-primary">Trending</button>
+					<button class="btn btn-outline-primary">This Week</button>
+					<button class="btn btn-outline-primary">This Month</button>
+					<button class="btn btn-outline-primary">This Year</button>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-5">
+			<div class="text-end">
+				<div class="dropdown">
+  <a class="btn btn-outline-primary sort dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+   Sort <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="dropdown-item" href="#">Oldest</a></li>
+    <li><a class="dropdown-item" href="#">Newest</a></li>
+  </ul>
+</div>
+				<!-- <button class="btn btn-outline-primary sort">Sort <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button> -->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="filters">
+				<ul>
+					<li>Catogories:</li>
+					<button class="btn btn-outline-primary crypto">Crypto</button>
+					<button class="btn btn-outline-primary crypto">Technology</button>
+					<button class="btn btn-outline-primary crypto">Investment</button>
+					<button class="btn btn-outline-primary crypto">Promotions</button>
+					<button class="btn btn-outline-primary crypto">Strategy</button>
+					<button class="btn btn-outline-primary crypto">Technology</button>
+					<button class="btn btn-outline-primary crypto">Promotions</button>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+	<!-- 	<div class="col-md-12">
+			<div class="card" style="background-image: url(img/Mas-Group.png);height: 340px;background-repeat: no-repeat;background-size: contain;">
+
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+		</div> -->
+		<a href="forum2.php" style="text-decoration: none;"><div class="col-md-12 mt-3 mb-3">
+
+			<div class="bg-imge">
+			
+				
+				<div class="white-text">
+				<p class="text-white">Lorem ipsum dolor sit amet,</p>
+				<p class="text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p></div>
+
+			</div>
+			<div class="body">
+			<div>
+				<h6 class="text-white">Posted on July 18, 2021</h6>
+			<span style="color: white;font-size: 22px;"class="font-lows"><i class="fa fa-user"></i>&nbsp;&nbsp;15 Members</span> &nbsp;&nbsp;<span class="font-lows" style="font-size: 22px;color: #fff;    position: relative;
+    left: 20px;"><i class="fa fa-comments-o"></i>&nbsp;&nbsp;25 Comments</span>
+		</div>
+		</div>
+
+		
+		</div></a>
+
+			<div class="col-md-12 mt-3 mb-3">
+
+			<div class="bg-imge">
+			
+				
+				<div class="white-text">
+				<p class="text-white">Lorem ipsum dolor sit amet,</p>
+				<p class="text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p></div>
+
+			</div>
+			<div class="body">
+			<div>
+				<h6 class="text-white">Posted on July 18, 2021</h6>
+			<span class="font-lows" style="color: white;font-size: 22px;"><i class="fa fa-user"></i>&nbsp;&nbsp;15 Members</span> &nbsp;&nbsp;<span class="font-lows" style="font-size: 22px;color: #fff;    position: relative;
+    left: 20px;"><i class="fa fa-comments-o"></i>&nbsp;&nbsp;25 Comments</span>
+		</div>
+		</div>
+
+		
+		</div>
+
+			<div class="col-md-12 mt-3 mb-3">
+
+			<div class="bg-imge">
+			
+				
+				<div class="white-text">
+				<p class="text-white">Lorem ipsum dolor sit amet,</p>
+				<p class="text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p></div>
+
+			</div>
+			<div class="body">
+			<div>
+				<h6 class="text-white">Posted on July 18, 2021</h6>
+			<span class="font-lows" style="color: white;font-size: 22px;"><i class="fa fa-user"></i>&nbsp;&nbsp;15 Members</span> &nbsp;&nbsp;<span class="font-lows" style="font-size: 22px;color: #fff;    position: relative;
+    left: 20px;"><i class="fa fa-comments-o"></i>&nbsp;&nbsp;25 Comments</span>
+		</div>
+		</div>
+
+		
+		</div>
+
+		<div class="col-md-12 mt-3 mb-3">
+
+			<div class="bg-imge">
+			
+				
+				<div class="white-text">
+				<p class="text-white">Lorem ipsum dolor sit amet,</p>
+				<p class="text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p></div>
+
+			</div>
+			<div class="body">
+			<div>
+				<h6 class="text-white">Posted on July 18, 2021</h6>
+			<span class="font-lows" style="color: white;font-size: 22px;"><i class="fa fa-user"></i>&nbsp;&nbsp;15 Members</span> &nbsp;&nbsp;<span class="font-lows" style="font-size: 22px;color: #fff;    position: relative;
+    left: 20px;"><i class="fa fa-comments-o"></i>&nbsp;&nbsp;25 Comments</span>
+		</div>
+		</div>
+
+		
+		</div>
+	</div>
+</div>
+<section >
+  <div class="imge-digi">
+    <img src="{% static 'img/Group-4462.png'%}">
+  </div>
+</section>
+
+
+
+{% endblock content %}

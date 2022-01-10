@@ -1,0 +1,98 @@
+{% extends "base_templates.html" %}
+{%load static%}
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+      {% include "dashboard/sidebar.html" %}
+    		</div>
+		<div class="col-md-9">
+			<div class="dashboard-h1">
+				<h6>Notification</h6>
+				<div class="new-div-fix">
+				<a href="create.php">	<button class="btn btn-new">Create new page &nbsp;<i class="fa fa-plus"></i></button></a>	
+
+                        <ul class="notification-drop">
+    <li class="item">
+      <i class="fa fa-bell-o notification-bell" aria-hidden="true"></i> <span class="btn__badge pulse-button ">4</span>     
+           <ul>
+        <li class="notification-list-li">
+          <div class="row">
+          <div class="col-3">
+            <img src="{% static 'https://digimonk.co/bolt/images/Ellipse-1.png'%}">
+          </div>
+          <div class="col-9">
+            <p class="notification-p-li">
+What is Shillzone
+A Free, Interactive Directory for crypto Developer to Store and Prioritize all their</p>
+          </div>
+        </div>
+    </li>
+          <li class="notification-list-li">
+          <div class="row">
+          <div class="col-3">
+            <img src="{% static 'https://digimonk.co/bolt/images/Ellipse-1.png'%}">
+          </div>
+          <div class="col-9">
+            <p class="notification-p-li">
+What is Shillzone
+A Free, Interactive Directory for crypto Developer to Store and Prioritize all their</p>
+          </div>
+        </div>
+    </li>
+         <li class="notification-list-li">
+          <div class="row">
+          <div class="col-3">
+            <img src="{% static 'https://digimonk.co/bolt/images/Ellipse-1.png'%}">
+          </div>
+          <div class="col-9">
+            <p class="notification-p-li">
+What is Shillzone
+A Free, Interactive Directory for crypto Developer to Store and Prioritize all their</p>
+          </div>
+        </div>
+    </li>
+    <div class="text-center mb-4 mt-3">
+      <a href="notification.php"><button class="btn  gradient">View All</button></a>
+    </div>
+      </ul>
+    </li>
+  </ul>
+ 
+
+                        <!-- <a href="" style="color: #fff;"> <i class="fa fa-bell"><span class="dotss">4</span></i></a> -->
+				</div>
+			</div>
+
+			<div class="row">
+            <div class="col-md-12">
+            	<div class="main-notifciaton">
+            	<div class="heading-notifaction">
+            	<h4><img src="{% static 'https://digimonk.xyz/images/Group%2092.png'%}" class="img-notification"> Harsh</h4>
+            		<span>Date:24-08-2021</span>
+            	</div>
+            	<div class="heading-p">
+            		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et</p>
+            	</div>
+            </div>
+
+            <div class="main-notifciaton">
+            	<div class="heading-notifaction">
+            		<h4><img src="{% static 'https://digimonk.xyz/images/Group%2092.png'%}" class="img-notification"> Harsh</h4>
+            		<span>Date:24-08-2021</span>
+            	</div>
+            	<div class="heading-p">
+            		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et</p>
+            	</div>
+            </div>
+
+
+            </div>
+            <div class="text-center">
+              <button class="btn  gradient">Load More</button>
+            </div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}

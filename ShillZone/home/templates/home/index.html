@@ -1,0 +1,915 @@
+{% extends "base_templates.html"%}
+{%load static%}
+{% block content %}
+
+<style type="">
+  i.fa.fa-search {
+    position: absolute;
+    right: 25%;
+    margin: 3px 52px;
+    color: rgb(190, 171, 171);
+    font-size: 12px;
+    padding: 0px;
+  }
+ 
+
+
+
+
+  
+
+
+
+</style>
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="text mt-5 ">
+          <h2>Improve the performance of your
+            <br> Crypto Investments
+          </h2>
+          <a href="{% url 'accounts_app_link:sign_up_view_link' %}"> 
+            <button class="btn btn-light">Join Now
+            </button>
+          </a>
+          <div class="mb-3 forms">
+            <label >Search Shillzone
+            </label>
+            <form class="forem">
+              <input class="form-control me-2" type="search" placeholder="Enter Shillzone page name, Token name, Address etc." aria-label="Search">
+              <a href="{% url 'home_app_link:search_view_link' %}" style="text-decoration: none;color: white;" class="btn  saerch" type="submit">
+                <i class="fa fa-search">
+                </i><!-- <a href="searchpage.php" style="text-decoration: none;color: white;"> --> Search<!-- </a> -->
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <img src="{% static 'img/Group-4380.png'%}" class="aboute-pic">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="imge">
+          <div class="shilzone-img">
+            <h3>What is Shillzone
+            </h3>
+          </div>
+          <p>A Free, Interactive Directory for crypto Developer to Store and Prioritize all their Promotional Links and Material for Investors to Find in OneSimple Place.
+          </p>
+          <p>An Essential Resource when Networking & Researching for your next & current Investments
+          </p>
+          <p>Ultimately, Shillzone makes token promotion More Simple & Effective.
+          </p>
+          <a href="{% url 'about_app_link:about_view_link' %}" style="text-decoration: none;color: #fff;">    
+            <button class="btn btn-learn">Learn More 
+              <i class="fa fa-arrow-circle-right" aria-hidden="true">
+              </i>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-clr">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+          <h1>Promoted Pages
+          </h1>
+          <p class="text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+          </p>
+        </div>
+      </div>
+      <div class="table-responsive">
+      <table class="table no-wrap table-new table-list" style="position: relative;">
+        <thead>
+          <tr>
+            <th>
+            </th>
+            <th>Sr. No.
+            </th>
+            <th>Action
+            </th>
+            <th>Coin Logo
+            </th>
+            <th>Coin Name
+            </th>
+            <th>Page Name
+            </th>
+            <th>Shouts
+            </th>
+            <th>Followers
+            </th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+    <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary active" style="color: white!important;">Following</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                 <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>   
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                 <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a> 
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary " >Following</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+
+
+        </tbody>
+      </table>
+    </div>
+
+<!--       <div class="col-md-4">
+        <a href="feed.php" style="text-decoration: none;">  
+          <div class="card redeus" >
+            <img src="img/bitcoin.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="bitcoin">
+                <h2>Invest in Bitcoin
+                </h2>
+                <h3>By : John Smith
+                </h3>
+              </div>
+              <div class="box">
+                <button class="btn gray">
+                  <div class="flexe">
+                    <i class="fa fa-bullhorn" aria-hidden="true">
+                    </i> 122
+                  </div>
+                </button>
+                <button class="btn gray">
+                  <div class="flexe"> 
+                    <i class="fa fa-heart">
+                    </i> 22
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="feed.php" style="text-decoration: none;">  
+          <div class="card redeus" >
+            <img src="img/bitcoin.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="bitcoin">
+                <h2>Invest in Bitcoin
+                </h2>
+                <h3>By : John Smith
+                </h3>
+              </div>
+              <div class="box">
+                <button class="btn gray">
+                  <div class="flexe">
+                    <i class="fa fa-bullhorn" aria-hidden="true">
+                    </i> 122
+                  </div>
+                </button>
+                <button class="btn gray">
+                  <div class="flexe"> 
+                    <i class="fa fa-heart">
+                    </i> 22
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="feed.php" style="text-decoration: none;">  
+          <div class="card redeus" >
+            <img src="img/bitcoin.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="bitcoin">
+                <h2>Invest in Bitcoin
+                </h2>
+                <h3>By : John Smith
+                </h3>
+              </div>
+              <div class="box">
+                <button class="btn gray">
+                  <div class="flexe">
+                    <i class="fa fa-bullhorn" aria-hidden="true">
+                    </i> 122
+                  </div>
+                </button>
+                <button class="btn gray">
+                  <div class="flexe"> 
+                    <i class="fa fa-heart">
+                    </i> 22
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="feed.php" style="text-decoration: none;">  
+          <div class="card redeus" >
+            <img src="img/bitcoin.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="bitcoin">
+                <h2>Invest in Bitcoin
+                </h2>
+                <h3>By : John Smith
+                </h3>
+              </div>
+              <div class="box">
+                <button class="btn gray">
+                  <div class="flexe">
+                    <i class="fa fa-bullhorn" aria-hidden="true">
+                    </i> 122
+                  </div>
+                </button>
+                <button class="btn gray">
+                  <div class="flexe"> 
+                    <i class="fa fa-heart">
+                    </i> 22
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="feed.php" style="text-decoration: none;">  
+          <div class="card redeus" >
+            <img src="img/bitcoin.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="bitcoin">
+                <h2>Invest in Bitcoin
+                </h2>
+                <h3>By : John Smith
+                </h3>
+              </div>
+              <div class="box">
+                <button class="btn gray">
+                  <div class="flexe">
+                    <i class="fa fa-bullhorn" aria-hidden="true">
+                    </i> 122
+                  </div>
+                </button>
+                <button class="btn gray">
+                  <div class="flexe"> 
+                    <i class="fa fa-heart">
+                    </i> 22
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="feed.php" style="text-decoration: none;">  
+          <div class="card redeus" >
+            <img src="img/bitcoin.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="bitcoin">
+                <h2>Invest in Bitcoin
+                </h2>
+                <h3>By : John Smith
+                </h3>
+              </div>
+              <div class="box">
+                <button class="btn gray">
+                  <div class="flexe">
+                    <i class="fa fa-bullhorn" aria-hidden="true">
+                    </i> 122
+                  </div>
+                </button>
+                <button class="btn gray">
+                  <div class="flexe"> 
+                    <i class="fa fa-heart">
+                    </i> 22
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-12">
+        <div class="text-center mt-5 mb-3">
+          <a href="feed.php">  
+            <button class="btn btn-outline-light all">View All
+            </button>
+          </a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+<section class="mb-5 mt-3 pb-5">
+  <div class="container ">
+    <div class="most">
+      <h5>MOST
+      </h5>
+      <h1>Trending Forums
+      </h1>
+    </div>
+  </div>
+  <div class="slider">
+    <div class="col-md-4">
+      <div class="card radius-1" >
+        <img src="{% static 'img/Group465.png'%}" class="card-img-top" alt="...">
+        <div class="card-body ">
+          <span class="bodyspan">Topic Name: Lorem ipsum dolor sit amet,
+          </span>
+          <p>Posted on July 18, 2021
+          </p>
+          <span style="color: white;font-size: 16px;">
+            <i class="fa fa-user">
+            </i>&nbsp;&nbsp;15 Members
+          </span> &nbsp;&nbsp;
+          <span style="font-size: 16px;color: #fff;">
+            <i class="fa fa-comments-o">
+            </i>&nbsp;&nbsp;25 Comments
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card radius-1" >
+        <img src="{% static 'img/Group465.png'%}" class="card-img-top" alt="...">
+        <div class="card-body ">
+          <span class="bodyspan">Topic Name: Lorem ipsum dolor sit amet,
+          </span>
+          <p>Posted on July 18, 2021
+          </p>
+          <span style="color: white;font-size: 16px;">
+            <i class="fa fa-user">
+            </i>&nbsp;&nbsp;15 Members
+          </span> &nbsp;&nbsp;
+          <span style="font-size: 16px;color: #fff;">
+            <i class="fa fa-comments-o">
+            </i>&nbsp;&nbsp;25 Comments
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card radius-1" >
+        <img src="{% static 'img/Group465.png'%}" class="card-img-top" alt="...">
+        <div class="card-body ">
+          <span class="bodyspan">Topic Name: Lorem ipsum dolor sit amet,
+          </span>
+          <p>Posted on July 18, 2021
+          </p>
+          <span style="color: white;font-size: 16px;">
+            <i class="fa fa-user">
+            </i>&nbsp;&nbsp;15 Members
+          </span> &nbsp;&nbsp;
+          <span style="font-size: 16px;color: #fff;">
+            <i class="fa fa-comments-o">
+            </i>&nbsp;&nbsp;25 Comments
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card radius-1" >
+        <img src="{% static 'img/Group465.png'%}" class="card-img-top" alt="...">
+        <div class="card-body ">
+          <span class="bodyspan">Topic Name: Lorem ipsum dolor sit amet,
+          </span>
+          <p>Posted on July 18, 2021
+          </p>
+          <span style="color: white;font-size: 16px;">
+            <i class="fa fa-user">
+            </i>&nbsp;&nbsp;15 Members
+          </span> &nbsp;&nbsp;
+          <span style="font-size: 16px;color: #fff;">
+            <i class="fa fa-comments-o">
+            </i>&nbsp;&nbsp;25 Comments
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-view">
+    <a href="{% url 'forum_app_link:forum_view_link' %}">View all
+    </a>
+  </div>
+</section>
+<section class="bg-clr">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center">
+          <h1> Shouted Page
+          </h1>
+          <p class="text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-4 pb-4">
+      <div class="table-responsive-1">
+        <div class="butons-primary">
+                <button class="btn btn-outline-primary" style="font-weight: bold;">Today</button>&nbsp;&nbsp;
+&nbsp;                <button class="btn btn-outline-primary" style="font-weight: bold;">This Week</button>&nbsp;&nbsp;
+&nbsp;
+                <button class="btn btn-outline-primary" style="font-weight: bold;">All Time</button>
+              </div>
+      <table class="table no-wrap table-new-1 table-list" style="position: relative;">
+        <tbody>
+
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary active" style="color: #fff!important;">Following</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+              <tr>
+            <td>
+                 <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>  
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Following</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="most">
+          <h5>MOST
+          </h5>
+          <h1>Recently Launched Pages
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-2">
+            <div class="table-responsive">
+      <table class="table no-wrap table-new table-list" style="position: relative;">
+        <thead>
+          <tr>
+            <th>
+            </th>
+            <th>Sr. No.
+            </th>
+            <th>Action
+            </th>
+            <th>Coin Logo
+            </th>
+            <th>Coin Name
+            </th>
+            <th>Page Name
+            </th>
+            <th>Shouts
+            </th>
+            <th>Followers
+            </th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+    <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary active" style="color: #fff!important;">Following</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                  <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>  
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                   <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Follow</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+              <tr>
+            <td>
+                <a href="promotion.php" style="color: #81878F;text-decoration: none;"> <img src="{% static 'img/noun_Rocket_1214384.png'%}"></a>  
+            </td>
+            <td> <a href="promotion.php" style="color: #81878F;text-decoration: none;">01 </a></td>
+            <td> <button class="btn btn-outline-primary">Following</button> </td>
+            <td>
+
+             <a href="promotion.php" style="color: #81878F;text-decoration: none;">  <img src="{% static 'img/coin.png'%}"></a>
+            </td>
+  <td>           <a href="promotion.php" style="color: #81878F;text-decoration: none;">Bitcoin </a></td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">Invest in Bitcoin</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">25</a>
+            </td>
+            <td><a href="promotion.php" style="color: #81878F;text-decoration: none;">12</a>
+            </td>
+            <td>Launched on<br> 02 Sep. 2021</td>
+          </tr>
+
+
+
+        </tbody>
+      </table>
+    </div>
+  <!--     <div class="col-md-4">
+        <a href="feed.php" style="text-decoration: none;">         
+          <div class="card shadow" >
+            <img src="img/bitcoin.png" >
+            <div class="card-body" style="background: #F3F9FE;">
+              <div class="bitcoin">
+                <h2>Invest in Bitcoin
+                </h2>
+                <h3>By : John Smith
+                </h3>
+              </div>
+              <div class="box">
+                <button class="btn gray">
+                  <div class="flexe">
+                    <i class="fa fa-bullhorn" aria-hidden="true">
+                    </i> 122
+                  </div>
+                </button>
+                <button class="btn gray">
+                  <div class="flexe"> 
+                    <i class="fa fa-heart">
+                    </i> 22
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="feed.php" style="text-decoration: none;">         
+          <div class="card shadow" >
+            <img src="img/bitcoin.png" >
+            <div class="card-body" style="background: #F3F9FE;">
+              <div class="bitcoin">
+                <h2>Invest in Bitcoin
+                </h2>
+                <h3>By : John Smith
+                </h3>
+              </div>
+              <div class="box">
+                <button class="btn gray">
+                  <div class="flexe">
+                    <i class="fa fa-bullhorn" aria-hidden="true">
+                    </i> 122
+                  </div>
+                </button>
+                <button class="btn gray">
+                  <div class="flexe"> 
+                    <i class="fa fa-heart">
+                    </i> 22
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="feed.php" style="text-decoration: none;">         
+          <div class="card shadow" >
+            <img src="img/bitcoin.png" >
+            <div class="card-body" style="background: #F3F9FE;">
+              <div class="bitcoin">
+                <h2>Invest in Bitcoin
+                </h2>
+                <h3>By : John Smith
+                </h3>
+              </div>
+              <div class="box">
+                <button class="btn gray">
+                  <div class="flexe">
+                    <i class="fa fa-bullhorn" aria-hidden="true">
+                    </i> 122
+                  </div>
+                </button>
+                <button class="btn gray">
+                  <div class="flexe"> 
+                    <i class="fa fa-heart">
+                    </i> 22
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-12">
+        <div class="text-center mt-5 mb-3">
+          <a href="feed.php">  
+            <button class="btn btn-outline-primary">View All
+            </button>
+          </a>
+        </div>
+      </div> -->
+
+<div class="text-center mt-5 mb-3">
+          <a href="{% url 'feed_app_link:feed_view_link'%}">  
+            <button class="btn btn-outline-primary">View All
+            </button>
+          </a>
+        </div>
+    </div>
+  </div>
+</section>
+<div class="sucess">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="sucess-1">
+          <img src="{% static 'img/Success.png'%}">
+          <h2>Chat with us on 
+          </h2>
+          <img src="{% static 'img/t-1.png'%}" class="tele">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="text-end mt-5">
+          <a href="{% url 'advertise_app_link:advertise_view_link' %}">  
+            <button class="btn large">Advertise With Us
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

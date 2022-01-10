@@ -1,0 +1,161 @@
+{% extends "base_templates.html" %}
+{%load static%}
+{% block content %}
+
+<style type="">
+  input.form-control.adverise {
+    height: 52px;
+    border: 1px solid #DBE2EA;
+    opacity: 0.60;
+}
+select.form-select {
+    padding: 13px;
+    border: 1px solid #DBE2EA;
+}
+</style>
+<div class="bg-about">
+  <h6>Advertise with us</h6>
+</div>
+<div>
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Advertise with us</li>
+  </ol>
+</nav>
+</div>
+
+<div class="container">
+  
+  <div class="row">
+    <div class="fill-form">
+      <h1>Want to Advertise with us?</h1>
+      <h5>Just Fill the Below Information.</h5>
+    </div>
+    <form method="post" action="" enctype="multipart/form-data">
+      {% csrf_token %}
+    <div class="col-md-6">
+        <div class="mb-3 mt-3">
+    <label class="f-name">Name</label>
+    <input type="" class="form-control adverise" name="name" placeholder="Type here">
+  </div>
+    </div>
+     <div class="col-md-6">
+        <div class="mb-3 mt-3">
+    <label class="f-name">Phone Number</label>
+    <input type="" class="form-control adverise" name="phone_number" placeholder="Type here">
+  
+  </div>
+    </div>
+       <div class="col-md-12">
+        <div class="mb-3 mt-3">
+    <label class="f-name">Email</label>
+    <input type="email" class="form-control adverise" name="email" placeholder="Type here">
+  
+  </div>
+    </div>
+    <div  class="col-md-12 mt-3 mb-3">
+      <label class="f-name" >Choose Banner Location</label>
+      <select class="form-select" name="banner" aria-label="Default select example">
+  <option selected>Feed Page</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+    </div>
+
+    <div class="col-md-12 mt-3 mb-3">
+      <label class="f-name">Upload banner</label>
+       <div class="dragdrop">
+                <div class="dropzone-wrapper">
+                  <div class="dropzone-desc"> 
+                    <i class="glyphicon glyphicon-download-alt">
+                    </i>
+                    <img id="file-image" src="{{ advertisewithus.banner_img.url}}"><br>
+                    <button class="btn btn-browse">Browse Files</button><br>
+                    <span>Banner size 1366x300 pixels</span>
+                  </div>
+                  <input type="file" name="img_logo" class="dropzone"  accept="image/*">
+                </div>
+              </div>
+    </div>
+
+<!-- 
+    <div class="col-md-12 mt-3 mb-3">
+      <label class="f-name">Upload banner</label>
+                                  <div id="file-upload-form" class="uploader">
+  <input id="file-upload" type="file" name="img_logo" accept="image/*" />
+
+  <label for="file-upload" id="file-drag">
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="position-relative">
+      <img id="file-image" src="{{ advertisewithus.banner_img.url}}" alt="Preview" >
+      <div class="icons-image">
+      <i class="fa fa-pencil-square-o "></i>
+      <i class="fa fa-trash "></i></div>
+    </div>
+  </div> -->
+    
+    <!-- <div id="start">
+      <img src="{% static 'img/cloud.png'%}"> -->
+     <!--  <i class="fa fa-download" aria-hidden="true"></i> -->
+      <!-- <div></div>
+      <div id="notimage" class="hidden">Please select an image</div>
+      <span id="file-upload-btn" class="btn btn-primary">Browse Files</span>
+    </div>
+    <div id="response" class="hidden">
+      <div id="messages"></div>
+      <progress class="progress" id="file-progress" value="0">
+        <span>0</span>%
+      </progress>
+    </div>
+  </label>
+</div> -->
+
+    <!-- <div class="col-md-12 mt-3 mb-3">
+      <label class="f-name" name="banner_img">Upload banner</label>
+       <div class="dragdrop">
+                <div class="dropzone-wrapper">
+                  <div class="dropzone-desc"> 
+                    <i class="glyphicon glyphicon-download-alt">
+                    </i>
+                    <img src="{% static 'img/cloud.png' %}"><br>
+                    <button class="btn btn-browse">Browse Files</button><br>
+                    <span>Banner size 1366x300 pixels</span>
+                  </div>
+                  <input type="file" name="img_logo" class="dropzone">
+                </div>
+              </div>
+    </div> -->
+
+    <div class="col-md-12">
+      <div class="mb-3 mt-3">
+  <label class="f-name">Add Redirection Link</label>
+  <input type="" class="form-control adverise" name="redirection_link" placeholder="Type here">
+
+</div>
+  </div>
+
+     <!-- <div class="col-md-12">
+        <div class="mb-3 mt-3">
+    <label class="f-name">Add Redirection Link</label>
+    <input type="" class="form-control adverise" name="redirection_link" placeholder="Type here">
+  
+  </div>
+    </div> -->
+    <div class="text-end mb-4">
+      <button type="submit" class="btn btn-primary sendd">SUBMIT</button>
+    </div>
+  </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock content %}

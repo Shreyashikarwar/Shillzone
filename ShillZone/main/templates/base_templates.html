@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <script src="<%=ResolveUrl('~/Scripts/jquery-1.3.2.js')%>" type="text/javascript"></script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+  <title></title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home_app_link:home_view_link' %}">
+        <img src="{% static 'img/a.png'%}">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav d-flex justify-content-end">
+          {% url 'home_app_link:home_view_link' as about %}
+          <li class="nav-item"> <a class="nav-link{% if request.path == '/' %}active{% endif %}" aria-current="page" href="{% url 'home_app_link:home_view_link' %}">Home</a>
+          </li>
+          
+          <li class="nav-item "> <a class="nav-link" href="dashboard.php" data-bs-toggle="modal" data-bs-target="#exampleModal-7">Dashboard</a>
+          </li>
+          {% url 'forum_app_link:forum_view_link' as forum %}
+          <li class="nav-item"> <a class="nav-link {% if request.path == '/forum/' %} active {% endif %}" href="{% url 'forum_app_link:forum_view_link' %}">Forum</a>
+          </li>
+          {% url 'feed_app_link:feed_view_link' as feed %}
+          <li class="nav-item "> <a class="nav-link {% if request.path == '/feed/' %} active {% endif %}" href="{% url 'feed_app_link:feed_view_link'%}">Feed</a>
+          </li>
+          {% url 'about_app_link:about_view_link' as about %}
+          <li class="nav-item"> <a class="nav-link {% if request.path == '/about/' %} active {% endif %}" href="{% url 'about_app_link:about_view_link' %}">About us</a>
+          </li>
+          {% url 'accounts_app_link:sign_up_view_link' as sign-up %}
+          <li class="nav-item"> <a class="nav-link {% if request.path == '/account/sign-up/' %} active {% endif %}" href="{% url 'accounts_app_link:sign_up_view_link' %}">Sign up</a>
+          </li>
+          {% url 'accounts_app_link:sign_in_view_link' as about %}
+          <li class="nav-item">
+            <a  href="{% url 'accounts_app_link:sign_in_view_link' %}" 
+             class="btn btn-primary siegn-in {% if request.path == '/about/' %} active {% endif %}">
+              Sign in
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!----------------------modal-login-dashbaord------------------------------>
+  <div class="modal fade" id="exampleModal-7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Dashboard Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center">
+                <h5>WELCOME</h5>
+                <img src="{% static 'img/a.png'%}">
+                <p class="login">Log in to start growing your investment now</p>
+              </div>
+              <div class="form">
+                <div class="form-floating mb-3">
+                  <input class="form-control style" id="floatingInput" placeholder="USERNAME/EMAIL">
+                  <label for="floatingInput" class="labes">Username/Email</label>
+                </div>
+                <div class="form-floating">
+                  <input class="form-control style" placeholder="Password">
+                  <label class="labes">Password</label>
+                </div>
+                <div class="mb-3 mt-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1" style="color: #787E8C;font-size: 14px;">Keep me signed in</label>
+                </div>
+                <div class="mb-5 mt-5">
+                <a href="dashboard.php">
+                  <button class="btn btn-sign-up">SIGN IN</button>
+                </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+     {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+  {% endif%}
+  <!-- ------------------------------------------- -->
+       <!-- body content start -->
+       {% block content %}
+       {% endblock %}
+       <!-- body content stop -->
+        <!-- ------------------------------------------- -->
+      <!--------------------Modal--------------------->
+  <div class="modal book-now-modal" id="dropdown-error-form">
+         <div class="modal-dialog">
+            <div class="modal-content show-popup">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Error Message</h4>
+                  <h5 class="modal-title"></h5>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  <span id="error_message_for_search"></span>
+               </div>
+            </div>
+         </div>
+  </div>
+      <!--------------------Modal Ends----------------->
+      <!--------------------Modal--------------------->
+  <div class="modal book-now-modal" id="dropdown-info-form">
+         <div class="modal-dialog">
+            <div class="modal-content show-popup">
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Success Message</h4>
+                  <h5 class="modal-title"></h5>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <!-- Modal body -->
+               <div class="modal-body">
+                  <span id="info_message_for_search"></span>
+               </div>
+            </div>
+         </div>
+  </div>
+       <!--------------------Modal Ends----------------->
+
+        <div class="footer pt-4 pb-4">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="footer-links">
+                    <img src="{% static 'img/b.png'%}" style="width: 350px;" class="footers-pic">
+                    <h2>Stay in touch</h2>
+                    <ul class="sociel">
+                      <li class="imgee">
+                        <img src="{% static 'img/003-facebook.png'%}">
+                      </li>
+                      <li class="imgee">
+                        <img src="{% static 'img/002-google-plus.svg'%}">
+                      </li>
+                      <li class="imgee">
+                        <img src="{% static 'img/001-twitter-logo-silhouette.pn'%}g">
+                      </li>
+                      <li class="imgee">
+                        <img src="{% static 'img/instagram.svg'%}">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="linls mt-4">
+                    <h1>Quick Links</h1>
+                    <ul class="link-1">
+                      <li><a href="{% url 'policy_app_link:policy_view_link' %}" style="text-decoration: none;color: #fff;">Disclaimer</a></li>
+                      <li><a href="{% url 'policy_app_link:policy_view_link' %}" style="text-decoration: none;color: #fff;"> Privacy & Policy</a>
+                      </li>
+                      <li><a href="{% url 'forum_app_link:forum_view_link' %}" style="text-decoration: none;color: #fff;">Forum</a></li>
+                      <li><a href="{% url 'advertise_app_link:advertise_view_link' %}" style="color: #fff;text-decoration: none;"> Advertise With Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="linls mt-4">
+                    <h1>Info Pages</h1>
+                    <ul class="link-1">
+                      <li><a href="{% url 'accounts_app_link:sign_in_view_link' %}" style="text-decoration: none;color: #fff;"> Sign Up  </a>
+                      </li>
+                      <li><a href="{% url 'feed_app_link:feed_view_link'%}" style="text-decoration: none;color: #fff;">Feed/Directory</a>
+                      </li>
+                      <li><a href="{% url 'contact_app_link:contact_view_link' %}" style="text-decoration: none;color: #fff;"> Contact Us</a>
+                      </li>
+                      <li><a href="{% url 'about_app_link:about_view_link' %}" style="text-decoration: none;color: #fff;"> About Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-footer">
+            <div class="text-center">
+              <p>Copyright © 2021 <span style="color: #1891E9;">SHILLZONE.</span> All Rights Reserved.</p>
+            </div>
+          </div>
+
+
+
+          
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+          <script type="">
+            $(document).ready(function() {
+            $(".notification-drop .item").on('click',function() {
+              $(this).find('ul').toggle();
+            });
+          });
+          </script>
+          
+          
+          <script>
+          function myFunction() {
+            alert("Assign To User");
+          }
+          </script>
+          
+          <script type="">
+            jQuery(document).ready(function($) {
+                $('.slider-3').slick({
+                  dots: false,
+                  infinite: true,
+                  speed: 500,
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  autoplay: false,
+                  autoplaySpeed: 2000,
+                  arrows: true,
+                  responsive: [{
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                    }
+                  },
+                  {
+                     breakpoint: 400,
+                     settings: {
+                        arrows: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                     }
+                  }]
+              });
+          });
+          </script>
+          
+          
+          <script type="">
+            jQuery(document).ready(function($) {
+                $('.slider').slick({
+                  dots: false,
+                  infinite: true,
+                  speed: 500,
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  autoplay: false,
+                  autoplaySpeed: 2000,
+                  arrows: true,
+                  responsive: [{
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                    }
+                  },
+                  {
+                     breakpoint: 400,
+                     settings: {
+                        arrows: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                     }
+                  }]
+              });
+          });
+          </script>
+          <script type="text/javascript">
+            $("#add").click(function(e) {
+                //Append a new row of code to the "#items" div
+                $("#items").append('<div class="row"><div class="col-md-12"><input class="form-control aderess input-md" placeholder="Paste link here" type="text"><img src="img/big-i.png" class="form-img"><textarea class="form-control" rows="4" placeholder="Info Description"></textarea> </div><button class="delete btn button-white uppercase" style="text-align:-webkit-right;"> \
+                              <i class="fa fa-trash">\
+                              </i>\
+                            </button></div>');
+            });
+          
+            $("body").on("click", ".delete", function(e) {
+                $(this).parent().remove();
+              });
+          </script>
+          <script type="text/javascript">
+            $("#add-4").click(function(e) {
+                //Append a new row of code to the "#items" div
+                $("#items-4").append('<div class="text-end">\
+                                \
+                                <div> <i class="fa fa-pencil-square-o" aria-hidden="true">\
+                                </i>\
+                                  <i class="fa fa-trash">\
+                                </i>\
+                                </div>\
+                              </div>\
+                              <div>\
+                                <input type="" name="" placeholder="Paste link here" class="form-control padding-off">\
+                              </div>');
+            });
+          
+            $("body").on("click", ".delete", function(e) {
+                $(this).parent().remove();
+              });
+          </script>
+          <!-- <script type="text/javascript">
+            $("#add-1").click(function(e) {
+                //Append a new row of code to the "#items" div
+                $("#items").append('<div class="row"><div class="col-md-12"><input class="form-control aderess input-md" placeholder="Paste link here" type="text"><textarea class="form-control" rows="4" placeholder="Description"></textarea> </div><button class="delete btn button-white uppercase" style="text-align:-webkit-right;"> \
+                              <i class="fa fa-trash">\
+                              </i>\
+                            </button></div>');
+            });
+          
+            $("body").on("click", ".delete", function(e) {
+                $(this).parent().remove();
+              });
+          </script> -->
+          <script type="text/javascript">
+            $("#add-1").click(function(e) {
+              $(".delete").fadeIn("1500");
+              //Append a new row of code to the "#items" div
+              $("#items-1").append(
+                '<div class="row"><div class="col-md-12"><div class="icon-flex"><p>Search Engine</p><div><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;<i class="fa fa-trash"></i></div></div><div><input type="" name=""placeholder="https://seolink_1.com" class="form-control padding-off"></div>'
+              );
+            });
+          
+            $("body").on("click", ".delete", function(e) {
+                $(this).parent().remove();
+              });
+          </script>
+          <!-- <script type="text/javascript">
+            $(document).ready(function() {
+            $(".delete").hide();
+            //when the Add Field button is clicked
+            $("#add-1").click(function(e) {
+              $(".delete").fadeIn("1500");
+              //Append a new row of code to the "#items" div
+              $("#items-1").append(
+                '<div class="row"><div class="col-md-12"><div class="icon-flex"><p>Acheivement</p><div><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;<i class="fa fa-trash"></i></div></div><div><input type="" name="" placeholder="Start Writing your acheivements" class="form-control"></div>'
+              );
+            });
+            $("body").on("click", ".delete", function(e) {
+              $(".next-referral").last().remove();
+            });
+          });
+          
+          </script> -->
+          <script type="text/javascript">
+            $(document).ready(function() {
+            $(".delete").hide();
+            //when the Add Field button is clicked
+            $("#add-3").click(function(e) {
+              $(".delete").fadeIn("1500");
+              //Append a new row of code to the "#items" div
+              $("#items-3").append(
+                '<div class="row"><div class="col-md-12"><div class="icon-flex"><p>Acheivement</p><div><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;<i class="fa fa-trash"></i></div></div><div><input type="" name="" placeholder="Start Writing your acheivements" class="form-control padding-off"></div>'
+              );
+            });
+            $("body").on("click", ".delete", function(e) {
+              $(".next-referral").last().remove();
+            });
+          });
+          </script>
+          <!-- <script type="text/javascript">
+            $(document).ready(function() {
+            $(".delete").hide();
+            //when the Add Field button is clicked
+            $("#add-2").click(function(e) {
+              $(".delete").fadeIn("1500");
+              //Append a new row of code to the "#items" div
+              $("#items-2").append(
+                '<div class="row"><div class="col-md-12">      <div class="bg-accordian">       <div class="accordion-item">\
+              <h2 class="accordion-header" id="headingTwo">\
+                <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">\
+                  <input type="checkbox" name="">\
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et\
+                                    </p>\
+                                    <i class="fa fa-pencil-square-o border">\
+                                    </i> \
+                                    <i class="fa fa-trash">\
+                                    </i>\
+                </div>\
+              </h2>\
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">\
+                <div class="accordion-body">\
+                  <div class="row">\
+                    <div class="col-1 text-end">\
+                      <span style="color: black;">Ans:</span>\
+                    </div>\
+                    <div class="col-11">\
+                      <p style="color: #8591B0;margin: 0;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.</p>\
+                    </div>\
+                  </div>\
+                </div>\
+              </div>\
+            </div></div></div>'
+              );
+            });
+            $("body").on("click", ".delete", function(e) {
+              $(".next-referral").last().remove();
+            });
+          });
+          
+          </script> -->
+          <script type="">
+            29
+          30
+          31
+          32
+          33
+          34
+          35
+          36
+          37
+          38
+          39
+          40
+          41
+          42
+          43
+          44
+          45
+          46
+          47
+          48
+          49
+          50
+          51
+          52
+          // Code By Webdevtrick ( https://webdevtrick.com )
+          function readFile(input) {
+            if (input.files && input.files[0]) {
+              var reader = new FileReader();
+           
+              reader.onload = function(e) {
+                var htmlPreview =
+                  '<img width="200" src="' + e.target.result + '" />' +
+                  '<p>' + input.files[0].name + '</p>';
+                var wrapperZone = $(input).parent();
+                var previewZone = $(input).parent().parent().find('.preview-zone');
+                var boxZone = $(input).parent().parent().find('.preview-zone').find('.box').find('.box-body');
+           
+                wrapperZone.removeClass('dragover');
+                previewZone.removeClass('hidden');
+                boxZone.empty();
+                boxZone.append(htmlPreview);
+              };
+           
+              reader.readAsDataURL(input.files[0]);
+            }
+          }
+           
+          function reset(e) {
+            e.wrap('<form>').closest('form').get(0).reset();
+            e.unwrap();
+          }
+           
+          $(".dropzone").change(function() {
+            readFile(this);
+          });
+           
+          $('.dropzone-wrapper').on('dragover', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).addClass('dragover');
+          });
+           
+          $('.dropzone-wrapper').on('dragleave', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).removeClass('dragover');
+          });
+           
+          $('.remove-preview').on('click', function() {
+            var boxZone = $(this).parents('.preview-zone').find('.box-body');
+            var previewZone = $(this).parents('.preview-zone');
+            var dropzone = $(this).parents('.form-group').find('.dropzone');
+            boxZone.empty();
+            previewZone.addClass('hidden');
+            reset(dropzone);
+          });
+          </script>
+          <script type="">
+            jQuery(document).ready(function() {
+            // click on next button
+            jQuery('.form-wizard-next-btn').click(function() {
+              var parentFieldset = jQuery(this).parents('.wizard-fieldset');
+              var currentActiveStep = jQuery(this).parents('.form-wizard').find('.form-wizard-steps .active');
+              var next = jQuery(this);
+              var nextWizardStep = true;
+              parentFieldset.find('.wizard-required').each(function(){
+                var thisValue = jQuery(this).val();
+          
+                if( thisValue == "") {
+                  jQuery(this).siblings(".wizard-form-error").slideDown();
+                  nextWizardStep = false;
+                }
+                else {
+                  jQuery(this).siblings(".wizard-form-error").slideUp();
+                }
+              });
+              if( nextWizardStep) {
+                next.parents('.wizard-fieldset').removeClass("show","400");
+                currentActiveStep.removeClass('active').addClass('activated').next().addClass('active',"400");
+                next.parents('.wizard-fieldset').next('.wizard-fieldset').addClass("show","400");
+                jQuery(document).find('.wizard-fieldset').each(function(){
+                  if(jQuery(this).hasClass('show')){
+                    var formAtrr = jQuery(this).attr('data-tab-content');
+                    jQuery(document).find('.form-wizard-steps .form-wizard-step-item').each(function(){
+                      if(jQuery(this).attr('data-attr') == formAtrr){
+                        jQuery(this).addClass('active');
+                        var innerWidth = jQuery(this).innerWidth();
+                        var position = jQuery(this).position();
+                        jQuery(document).find('.form-wizard-step-move').css({"left": position.left, "width": innerWidth});
+                      }else{
+                        jQuery(this).removeClass('active');
+                      }
+                    });
+                  }
+                });
+              }
+            });
+            //click on previous button
+            jQuery('.form-wizard-previous-btn').click(function() {
+              var counter = parseInt(jQuery(".wizard-counter").text());;
+              var prev =jQuery(this);
+              var currentActiveStep = jQuery(this).parents('.form-wizard').find('.form-wizard-steps .active');
+              prev.parents('.wizard-fieldset').removeClass("show","400");
+              prev.parents('.wizard-fieldset').prev('.wizard-fieldset').addClass("show","400");
+              currentActiveStep.removeClass('active').prev().removeClass('activated').addClass('active',"400");
+              jQuery(document).find('.wizard-fieldset').each(function(){
+                if(jQuery(this).hasClass('show')){
+                  var formAtrr = jQuery(this).attr('data-tab-content');
+                  jQuery(document).find('.form-wizard-steps .form-wizard-step-item').each(function(){
+                    if(jQuery(this).attr('data-attr') == formAtrr){
+                      jQuery(this).addClass('active');
+                      var innerWidth = jQuery(this).innerWidth();
+                      var position = jQuery(this).position();
+                      jQuery(document).find('.form-wizard-step-move').css({"left": position.left, "width": innerWidth});
+                    }else{
+                      jQuery(this).removeClass('active');
+                    }
+                  });
+                }
+              });
+            });
+            //click on form submit button
+            jQuery(document).on("click",".form-wizard .form-wizard-submit" , function(){
+              var parentFieldset = jQuery(this).parents('.wizard-fieldset');
+              var currentActiveStep = jQuery(this).parents('.form-wizard').find('.form-wizard-steps .active');
+              parentFieldset.find('.wizard-required').each(function() {
+                var thisValue = jQuery(this).val();
+                if( thisValue == "" ) {
+                  jQuery(this).siblings(".wizard-form-error").slideDown();
+                }
+                else {
+                  jQuery(this).siblings(".wizard-form-error").slideUp();
+                }
+              });
+            });
+            // focus on input field check empty or not
+            jQuery(".form-control").on('focus', function(){
+              var tmpThis = jQuery(this).val();
+              if(tmpThis == '' ) {
+                jQuery(this).parent().addClass("focus-input");
+              }
+              else if(tmpThis !='' ){
+                jQuery(this).parent().addClass("focus-input");
+              }
+            }).on('blur', function(){
+              var tmpThis = jQuery(this).val();
+              if(tmpThis == '' ) {
+                jQuery(this).parent().removeClass("focus-input");
+                jQuery(this).siblings('.wizard-form-error').slideDown("3000");
+              }
+              else if(tmpThis !='' ){
+                jQuery(this).parent().addClass("focus-input");
+                jQuery(this).siblings('.wizard-form-error').slideUp("3000");
+              }
+            });
+          });
+          </script>
+          <script type="">
+            let digitValidate = function(ele){
+            console.log(ele.value);
+            ele.value = ele.value.replace(/[^0-9]/g,'');
+          }
+          
+          let tabChange = function(val){
+              let ele = document.querySelectorAll('input');
+              if(ele[val-1].value != ''){
+                ele[val].focus()
+              }else if(ele[val-1].value == ''){
+                ele[val-2].focus()
+              }   
+           }
+          </script>
+          <!-- message start -->
+      {% if messages %}
+      {% for message in messages %}
+      {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+      <script>
+         $('#dropdown-info-form').modal('show');
+         $('#info_message_for_search').html('{{message}}');
+
+      </script>
+      {% endif %}
+      {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+      <script>
+         $('#dropdown-info-form').modal('show');
+         $('#error_message_for_search').html('{{message}}');
+      </script>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+      <!-- message Stop -->
+          </body>
+          
+          </html>

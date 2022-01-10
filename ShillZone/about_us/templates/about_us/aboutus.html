@@ -1,0 +1,86 @@
+{% extends "base_templates.html"%}
+{% load static %}
+{% block content %}
+
+<div class="bg-about">
+  <h6>About Us</h6>
+</div>
+<div>
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">About Us</li>
+  </ol>
+</nav>
+</div>
+{% for about in about_data %}
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+        <div>
+          <img src="{{ about.image1.url }}">
+        </div>
+      </div>
+
+        <div class="col-md-6">
+        <div class="imge">
+        <div class="shilzone-img">
+          <h3>What is Shillzone</h3></div>
+          <p>{{ about.about1|safe }}</p>
+          <!-- <p>A Free, Interactive Directory for crypto Developer to Store and Prioritize all their Promotional Links and Material for Investors to Find in OneSimple Place.</p>
+          <p>An Essential Resource when Networking &amp; Researching for your next &amp; current Investments</p>
+          <p>Ultimately, Shillzone makes token promotion More Simple &amp; Effective.</p> -->
+         <!--  <button class="btn btn-learn">Learn More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button> -->
+        </div>
+      </div>     
+     
+  </div>
+</div>
+
+<div class="container mb-5">
+  <div class="row">
+     <div class="col-md-7">
+        <div class="imge">
+         <div class="shilzone-img">
+          <h3>What is Shillzone</h3></div>
+          <p>{{about.about2|safe}}</p>
+          <!-- <p>A Free, Interactive Directory for crypto Developer to Store and Prioritize all their Promotional Links and Material for Investors to Find in OneSimple Place.</p>
+          <p>An Essential Resource when Networking &amp; Researching for your next &amp; current Investments</p>
+          <p>Ultimately, Shillzone makes token promotion More Simple &amp; Effective.</p> -->
+        <!--   <button class="btn btn-learn">Learn More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button> -->
+        </div>
+      </div>
+       <div class="col-md-5">
+        <div class="text-end">
+          <img src="{{ about.image2.url }}" class="about-pic">
+        </div>
+      </div>
+  </div>
+</div>
+{% endfor %}
+
+
+<div class="sucess">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="sucess-1">
+          <img src="{% static 'img/Success.png'%}">
+          <h2>Chat with us on </h2>
+          <img src="{% static 'img/t-1.png'%}" class="tele">
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="text-end mt-5">
+        <a href="advertise.php">  <button class="btn large">Advertise With Us</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock content %}
